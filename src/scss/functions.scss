@@ -1,0 +1,21 @@
+/* Convert px to rem */
+@function rem($px) {
+  @return ($px / 16) * 1rem;
+}
+
+/* Color opacity helper */
+@function rgba-color($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+/* Z-index scale */
+$z-index-map: (
+  base: 1,
+  dropdown: 1000,
+  modal: 2000,
+  overlay: 3000
+);
+
+@function z($key) {
+  @return map-get($z-index-map, $key);
+}
