@@ -1,0 +1,55 @@
+@use "@/scss/index" as *;
+
+.conversion {
+  padding: 100px $spacing-md;
+
+  &__container {
+    max-width: map-get($breakpoints, xl);
+    margin: 0 auto;
+    display: grid;
+    gap: $spacing-xl;
+    // padding: $spacing-lg;
+
+    .header {
+      margin-bottom: $spacing-md;
+      display: flex;
+      gap: $spacing-xl;
+    }
+
+    .title {
+      font-size: $font-size-xxl;
+      letter-spacing: $letter-spacing-xs;
+      font-weight: 500;
+      text-align: right;
+      max-width: map-get($container-widths, lg);
+      line-height: initial;
+    }
+  }
+
+  &__content {
+    display: grid;
+    // display: flex;
+    gap: $spacing-md;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(210px, 1fr)
+    );
+
+    div:first-child {
+      grid-column: span 3;
+      max-height: 480px;
+
+      @media (max-width: map-get($breakpoints, xl)) {
+        grid-column: span 1;
+      }
+    }
+
+    div:last-child {
+      grid-column: span 2;
+
+       @media (max-width: map-get($breakpoints, xl)) {
+        grid-column: span 1;
+      }
+    }
+  }
+}

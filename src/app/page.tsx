@@ -1,12 +1,14 @@
-import React from 'react'
-import Conversion from './(home)/_components/conversion/Conversion'
+import React from "react";
+import ConversionSection from "@/app/(home)/_components/ConversionSection";
 
 const page = () => {
   return (
     <div>
-      <Conversion />
+      <section>
+        <ConversionSection />
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
