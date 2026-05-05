@@ -132,7 +132,7 @@ const Convertor: React.FC = () => {
                     className={`conversion__menu-item ${c.code === fromCur.code ? "active" : ""}`}
                     onClick={() => { setFromCur(c); setFromOpen(false); }}
                   >
-                    <span>{c.flag}</span>
+                    <span className="conversion__flag">{c.flag}</span>
                     <span className="conversion__menu-code">{c.code}</span>
                     <span className="conversion__menu-name">{c.name}</span>
                     {c.code === fromCur.code && <RiCheckboxCircleLine className="icon conversion__check" />}
@@ -144,16 +144,15 @@ const Convertor: React.FC = () => {
         </div>
       </div>
 
-      {/* ── Fee breakdown ────────────────────────────────────────────── */}
       <div className="conversion__breakdown">
         <div className="conversion__breakdown-row">
-          <span className="conversion__breakdown-icon"><RiExchangeDollarLine className="icon" /></span>
+          <span className="conversion__breakdown-icon"><RiExchangeDollarLine className="" /></span>
           <span className="conversion__breakdown-label">You send</span>
           <span className="conversion__breakdown-value free">Free</span>
         </div>
 
         <div className="conversion__breakdown-row">
-          <span className="conversion__breakdown-icon"><RiCheckboxCircleLine className="icon" /></span>
+          <span className="conversion__breakdown-icon"><RiCheckboxCircleLine className="" /></span>
           <span className="conversion__breakdown-label">Total pay</span>
           <span className="conversion__breakdown-value">
             {numAmount > 0 ? `${fmt(numAmount)} ${fromCur.code}` : "—"}
@@ -163,8 +162,8 @@ const Convertor: React.FC = () => {
         <div className="conversion__breakdown-row">
           <span className="conversion__breakdown-icon">
             {loading
-              ? <RiLoader4Line className="icon conversion__spin" />
-              : <RiArrowLeftRightLine className="icon" />
+              ? <RiLoader4Line className=" conversion__spin" />
+              : <RiArrowLeftRightLine className="" />
             }
           </span>
           <span className="conversion__breakdown-label">Rate</span>
@@ -174,12 +173,10 @@ const Convertor: React.FC = () => {
         </div>
       </div>
 
-      {/* ── Receiver gets ────────────────────────────────────────────── */}
       <div className="conversion__section">
         <span className="conversion__label">Receiver gets</span>
 
         <div className="conversion__row">
-          {/* Converted currency symbol prefix */}
           <span className="conversion__symbol conversion__symbol--muted">{toCur.symbol}</span>
           <span className="conversion__amount conversion__amount--converted">
             {loading
@@ -188,7 +185,6 @@ const Convertor: React.FC = () => {
             }
           </span>
 
-          {/* To currency dropdown */}
           <div className="conversion__dropdown" ref={toRef}>
             <button
               className="conversion__cur-btn"
@@ -222,11 +218,11 @@ const Convertor: React.FC = () => {
       {/* ── Footer ───────────────────────────────────────────────────── */}
       <div className="conversion__footer">
         <p>Transfer internationally within minutes</p>
-        {lastFetched && (
+        {/* {lastFetched && (
           <span className="conversion__updated">
             updated {lastFetched.toLocaleTimeString()}
           </span>
-        )}
+        )} */}
       </div>
     </div>
   );

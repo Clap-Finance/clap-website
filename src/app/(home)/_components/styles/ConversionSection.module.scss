@@ -8,7 +8,6 @@
     margin: 0 auto;
     display: grid;
     gap: $spacing-xl;
-    // padding: $spacing-lg;
 
     .header {
       margin-bottom: $spacing-md;
@@ -19,7 +18,8 @@
     .title {
       font-size: $font-size-xxl;
       letter-spacing: $letter-spacing-xs;
-      font-weight: 500;
+      color: $color-gray-800;
+      font-weight: 400;
       text-align: right;
       max-width: map-get($container-widths, lg);
       line-height: initial;

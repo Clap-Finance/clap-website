@@ -7,7 +7,7 @@
   width: 100%;
   height: -webkit-fill-available;
 
-  position: relative; // ✅ needed for absolute track
+  position: relative;
 }
 
 .card {
@@ -41,10 +41,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: $spacing-xl;
-border: 2px solid $bg-section-border;
-margin: $spacing-md;
-border-radius: $radius-lg;
+  padding: useAdvanceClamp(320, 1024, 8, 40);
+  border: 2px solid $bg-section-border;
+  margin: $spacing-md;
+  border-radius: $radius-lg;
 }
 
 .bottom {
@@ -109,7 +109,9 @@ border-radius: $radius-lg;
   height: 12px;
 
   cursor: pointer;
-  transition: width 0.4s ease, background 0.4s ease;
+  transition:
+    width 0.4s ease,
+    background 0.4s ease;
 
   &.active {
     width: 52px;
