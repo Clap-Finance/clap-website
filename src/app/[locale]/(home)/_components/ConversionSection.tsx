@@ -1,19 +1,16 @@
+import { useTranslations } from "next-intl";
 import ConverterSlider from "./ConverterSlider";
 import Convertor from "./Convertor";
 import style from "./styles/ConversionSection.module.scss";
 
 const ConversionSection = () => {
+  const t = useTranslations("HomePage");
   return (
     <section className={style.conversion}>
       <div className={style.conversion__container}>
         <header className={style.header}>
-          <div>
-Supports Every step
-          </div>
-          <h2 className={style.title}>
-            Convert money instantly with real-time rates across Naira, Cedi, and
-            CFA—so you always know exactly what you send and what arrives.
-          </h2>
+          <div>{t("conversionSection.description")}</div>
+          <h2 className={style.title}>{t("conversionSection.title")}</h2>
         </header>
         <div className={style.conversion__content}>
           <div>

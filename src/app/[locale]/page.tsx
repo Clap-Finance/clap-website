@@ -1,5 +1,5 @@
 import React from "react";
-import ConversionSection from "@/app/(home)/_components/ConversionSection";
+import ConversionSection from "@/app/[locale]/(home)/_components/ConversionSection";
 
 const page = () => {
   return (
