@@ -1,51 +1,19 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import { useState } from "react";
 import styles from "./LanguagePopover.module.scss";
 import { Global } from "iconsax-reactjs";
+import Modal from "../common/modal";
+import { MdGTranslate } from "react-icons/md";
 
-type Position =
-  | "center"
-  | "top-left"
-  | "top-right"
-  | "top-middle"
-  | "bottom-left"
-  | "bottom-right"
-  | "bottom-middle"
-  | "left-middle"
-  | "right-middle";
-
-const regions = [
-  { id: "global", name: "Global", flag: "🌍" },
-  { id: "algeria", name: "Algeria", flag: "🇩🇿" },
-  { id: "brazil", name: "Brazil", flag: "🇧🇷" },
-  { id: "egypt", name: "Egypt", flag: "🇪🇬" },
-  { id: "ghana", name: "Ghana", flag: "🇬🇭" },
-  { id: "india", name: "India", flag: "🇮🇳" },
-  { id: "indonesia", name: "Indonesia", flag: "🇮🇩" },
-  { id: "kenya", name: "Kenya", flag: "🇰🇪" },
-  { id: "mexico", name: "Mexico", flag: "🇲🇽" },
-  { id: "morocco", name: "Morocco", flag: "🇲🇦" },
-  { id: "philippines", name: "Philippines", flag: "🇵🇭" },
-  { id: "south-africa", name: "South Africa", flag: "🇿🇦" },
-  { id: "tanzania", name: "Tanzania", flag: "🇹🇿" },
-];
-
-const positions: Position[] = [
-  "top-left",
-  "top-middle",
-  "top-right",
-  "left-middle",
-  "center",
-  "right-middle",
-  "bottom-left",
-  "bottom-middle",
-  "bottom-right",
+const languages = [
+  { code: "en", label: "English" },
+  { code: "fr", label: "French" },
+  { code: "es", label: "Spanish" },
+  // Add more languages here if needed
 ];
 
 const LanguagePopover = () => {
-  const popoverRef = useRef<HTMLDivElement | null>(null);
-
   const [open, setOpen] = useState(false);
   const [language, setLanguage] = useState("en");
 
@@ -55,67 +23,33 @@ const LanguagePopover = () => {
         className={styles.openBtn}
         onClick={() => setOpen(true)}
         popoverTarget="mypopover"
-        // className="flex items-center justify-center gap-1 px-3 py-2 rounded-md hover:bg-gray-100 text-md uppercase"
       >
         <Global size="20" color="#1c1c1c" variant="TwoTone" />{" "}
         {language.toUpperCase()}
       </button>
 
-      {/* Backdrop */}
-      {open && (
+      <Modal>
         <div
-          className={`${styles.backdrop} ${open ? styles.in : ""}`}
-          onClick={() => setOpen(false)}
-        />
-      )}
+        className={styles.languages}
+        >
+          <div className={styles.header}>
+            <span>Select your language</span>
+          </div>
 
-      <div id="mypopover" popover="auto"  ref={popoverRef} className={styles.popover}>
-      <div className={styles.popover_content}> Popover content
+          <ul className={styles.tabs}>
+            {languages.map((lang) => (
+              <li
+                key={lang.code}
+                className={language === lang.code ? styles.active : ""}
+                onClick={() => setLanguage(lang.code)}
+              >
+               <MdGTranslate />
+               <span>{lang.label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-
-      {/* <div
-        className={`${styles.modal} ${
-          open ? `${styles.visible} ${styles.in}` : ""
-        } ${styles[`pos-${position}`]}`}
-      >
-        <div className={styles.header}>
-          <span>Select your language</span>
-          <button onClick={() => setOpen(false)}>✕</button>
-        </div>
-
-        <div className={styles.tabs}>
-          <button
-            className={language === "en" ? styles.active : ""}
-            onClick={() => setLanguage("en")}
-          >
-            English
-          </button>
-          <button
-            className={language === "es" ? styles.active : ""}
-            onClick={() => setLanguage("es")}
-          >
-            Spanish
-          </button>
-        </div>
-
-        <div className={styles.sectionLabel}>Select your region</div>
-
-        <div className={styles.grid}>
-          {regions.map((r) => (
-            <div
-              key={r.id}
-              className={`${styles.regionItem} ${
-                region === r.id ? styles.active : ""
-              }`}
-              onClick={() => setRegion(r.id)}
-            >
-              <span className={styles.flag}>{r.flag}</span>
-              <span>{r.name}</span>
-            </div>
-          ))}
-        </div>
-      </div> */}
+      </Modal>
     </div>
   );
 };
