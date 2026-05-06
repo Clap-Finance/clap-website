@@ -7,7 +7,7 @@ const page = () => {
     <div>
       <section>
         <HeroSection />
-        {/* <ConversionSection /> */}
+        <ConversionSection />
       </section>
     </div>
   );

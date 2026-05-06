@@ -12,7 +12,7 @@ type Position =
   | "left-middle"
   | "right-middle";
 
-const Modal = ({ children }: { children: React.ReactNode }) => {
+const Modal = ({ children, id }: { children: React.ReactNode, id: string }) => {
   const popoverRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState<Position>("bottom-middle");
 
@@ -30,7 +30,7 @@ const Modal = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div
-      id="mypopover"
+      id={id}
       popover="auto"
       ref={popoverRef}
       className={styles.popover}

@@ -1,12 +1,14 @@
 {
   "HomePage": {
-    "title": "Convert money instantly with real-time rates across Naira, Cedi, and CFA—so you always know exactly what you send and what arrives.",
-    "description": "Convert your money with the best rates.",
-    "cta": "Join the waiting list",
+    "heroSection": {
+      "title": "Move money like it should be — fast, simple, borderless.",
+      "description": "Clap is a money transfer service that makes it easy to send and receive money",
+      "cta": "Request early access"
+    },
     "conversionSection": {
       "title": "Convert money instantly with real-time rates across Naira, Cedi, and CFA—so you always know exactly what you send and what arrives.",
       "description": "Convert your money with the best rates.",
-      "cta": "Join the waiting list"
+      "cta": "Request early access"
     }
   }
 }
