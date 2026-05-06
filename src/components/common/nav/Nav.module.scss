@@ -18,6 +18,7 @@
 
   &__cta {
      display: flex;
-     gap: $spacing-xs;
+     align-items: center;
+     gap: $spacing-sm;
   }
 }

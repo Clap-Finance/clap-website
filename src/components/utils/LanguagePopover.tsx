@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./LanguagePopover.module.scss";
 import { Global } from "iconsax-reactjs";
 
@@ -44,33 +44,18 @@ const positions: Position[] = [
 ];
 
 const LanguagePopover = () => {
+  const popoverRef = useRef<HTMLDivElement | null>(null);
+
   const [open, setOpen] = useState(false);
-  const [position, setPosition] = useState<Position>("center");
   const [language, setLanguage] = useState("en");
-  const [region, setRegion] = useState("egypt");
 
   return (
-    <div className={styles.wrapper}>
-      {/* Position Controls
-      <div className={styles.controls}>
-        {positions.map((pos) => (
-          <button
-            key={pos}
-            className={`${styles.posBtn} ${
-              position === pos ? styles.active : ""
-            }`}
-            onClick={() => setPosition(pos)}
-          >
-            {pos}
-          </button>
-        ))}
-      </div> */}
-
-      {/* Trigger */}
+    <div className={styles.nations_wrapper}>
       <button
-        // className={styles.openBtn}
+        className={styles.openBtn}
         onClick={() => setOpen(true)}
-        className="flex items-center justify-center gap-1 px-3 py-2 rounded-md hover:bg-gray-100 text-md uppercase"
+        popoverTarget="mypopover"
+        // className="flex items-center justify-center gap-1 px-3 py-2 rounded-md hover:bg-gray-100 text-md uppercase"
       >
         <Global size="20" color="#1c1c1c" variant="TwoTone" />{" "}
         {language.toUpperCase()}
@@ -84,8 +69,12 @@ const LanguagePopover = () => {
         />
       )}
 
-      {/* Modal */}
-      <div
+      <div id="mypopover" popover="auto"  ref={popoverRef} className={styles.popover}>
+      <div className={styles.popover_content}> Popover content
+        </div>
+      </div>
+
+      {/* <div
         className={`${styles.modal} ${
           open ? `${styles.visible} ${styles.in}` : ""
         } ${styles[`pos-${position}`]}`}
@@ -95,7 +84,6 @@ const LanguagePopover = () => {
           <button onClick={() => setOpen(false)}>✕</button>
         </div>
 
-        {/* Language Tabs */}
         <div className={styles.tabs}>
           <button
             className={language === "en" ? styles.active : ""}
@@ -113,7 +101,6 @@ const LanguagePopover = () => {
 
         <div className={styles.sectionLabel}>Select your region</div>
 
-        {/* Regions */}
         <div className={styles.grid}>
           {regions.map((r) => (
             <div
@@ -128,7 +115,7 @@ const LanguagePopover = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
