@@ -1,0 +1,23 @@
+@use "@/scss/index" as *;
+
+.nav {
+  width: 100%;
+  padding: $spacing-md;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: map-get($container-widths, xxl);
+    margin: 0 auto;
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__cta {
+     display: flex;
+     gap: $spacing-xs;
+  }
+}

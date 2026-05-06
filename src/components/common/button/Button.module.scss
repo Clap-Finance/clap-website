@@ -1,0 +1,104 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 999px;
+
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.md {
+  padding: 10px 18px;
+  font-size: 14px;
+}
+
+.lg {
+  padding: 14px 24px;
+  font-size: 16px;
+}
+
+.primary {
+  background: #2a53f1;
+  color: #fff;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #1f3ed6;
+    transform: translateY(-1px);
+    transform: scale(0.95);
+  }
+}
+
+.secondary {
+  background: #c1ff40;
+  color: #0d1321;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.ghost {
+  background: transparent;
+  color: #2a53f1;
+
+  &:hover {
+    background: rgba(42, 83, 241, 0.1);
+  }
+}
+
+.danger {
+  background: #ff4d4f;
+  color: white;
+
+  &:hover {
+    background: #e04344;
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.loading {
+  pointer-events: none;
+}
+
+.icon {
+  display: inline-flex;
+}
+
+.label {
+  display: inline-flex;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
