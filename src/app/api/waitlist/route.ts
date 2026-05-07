@@ -2,125 +2,98 @@ import { NextRequest, NextResponse } from "next/server";
 import mongoClientPromise from "@/lib/mongodb";
 import { WaitlistPayload } from "@/types/waitlist";
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
 
-const VALID_DEVICES = ["Desktop", "Mobile", "Tablet"];
+const VALID_DEVICES = new Set(["Desktop", "Mobile", "Tablet"]);
+
+type ApiResponse<T = null> = {
+  success: boolean;
+  type: string;
+  message: string;
+  data?: T;
+};
+
+class ApiError extends Error {
+  status: number;
+  type: string;
+
+  constructor(status: number, type: string, message: string) {
+    super(message);
+
+    this.status = status;
+    this.type = type;
+  }
+}
+
+function response<T>(
+  payload: ApiResponse<T>,
+  status: number,
+): NextResponse<ApiResponse<T>> {
+  return NextResponse.json(payload, { status });
+}
+
+function validatePayload(payload: WaitlistPayload) {
+  const { full_name, email, terms, device_type, time_on_page } = payload;
+
+  if (!full_name?.trim() || full_name.trim().length < 2) {
+    throw new ApiError(
+      400,
+      "VALIDATION_ERROR",
+      "Full name must be at least 2 characters",
+    );
+  }
+
+  if (!email?.trim()) {
+    throw new ApiError(400, "VALIDATION_ERROR", "Email is required");
+  }
+
+  if (!EMAIL_REGEX.test(email)) {
+    throw new ApiError(400, "VALIDATION_ERROR", "Invalid email address");
+  }
+
+  if (!terms) {
+    throw new ApiError(400, "TERMS_REQUIRED", "You must accept the terms");
+  }
+
+  if (device_type && !VALID_DEVICES.has(device_type)) {
+    throw new ApiError(400, "VALIDATION_ERROR", "Invalid device type");
+  }
+
+  if (
+    time_on_page !== undefined &&
+    (typeof time_on_page !== "number" || time_on_page < 0)
+  ) {
+    throw new ApiError(400, "VALIDATION_ERROR", "Invalid time_on_page value");
+  }
+}
 
 export async function POST(req: NextRequest) {
   try {
     const body: WaitlistPayload = await req.json();
 
-    const {
-      full_name,
-      email,
-      terms,
-      device_type,
-      country,
-      referral_source,
-      campaign_source,
-      time_on_page,
-    } = body;
-
-    if (!full_name || full_name.trim().length < 2) {
-      return NextResponse.json(
-        {
-          success: false,
-          type: "VALIDATION_ERROR",
-          message: "Full name must be at least 2 characters",
-        },
-        { status: 400 },
-      );
-    }
-
-    if (!email?.trim()) {
-      return NextResponse.json(
-        {
-          success: false,
-          type: "VALIDATION_ERROR",
-          message: "Email is required",
-        },
-        { status: 400 },
-      );
-    }
-
-    if (!EMAIL_REGEX.test(email)) {
-      return NextResponse.json(
-        {
-          success: false,
-          type: "VALIDATION_ERROR",
-          message: "Invalid email address",
-        },
-        { status: 400 },
-      );
-    }
-
-    if (!terms) {
-      return NextResponse.json(
-        {
-          success: false,
-          type: "TERMS_REQUIRED",
-          message: "You must accept the terms",
-        },
-        { status: 400 },
-      );
-    }
-
-    if (device_type && !VALID_DEVICES.includes(device_type)) {
-      return NextResponse.json(
-        {
-          success: false,
-          type: "VALIDATION_ERROR",
-          message: "Invalid device type",
-        },
-        { status: 400 },
-      );
-    }
+    validatePayload(body);
 
     const client = await mongoClientPromise;
+    const db = client.db(process.env.DB_NAME);
+    const collection = db.collection("waitlist");
+    const normalizedEmail = body.email.trim().toLowerCase();
 
-    const db = client.db(process.env.DB_NAME!);
-
-    const collection = db.collection(process.env.USER_COLLECTION!);
-
-    const existingEmail = await collection.findOne({
-      email: email.toLowerCase(),
-    });
-
-    if (existingEmail) {
-      return NextResponse.json(
-        {
-          success: false,
-          type: "EMAIL_EXISTS",
-          message: "This email already exists on the waitlist",
-        },
-        { status: 409 },
-      );
-    }
-
-    const newEntry = {
-      full_name: full_name.trim(),
-
-      email: email.toLowerCase(),
-
-      terms,
-
-      device_type: device_type || "Desktop",
-
-      country: country || "Unknown",
-
-      referral_source: referral_source || "Direct",
-
-      campaign_source: campaign_source || "Organic",
-
-      time_on_page: typeof time_on_page === "number" ? time_on_page : 0,
-
+    const document = {
+      full_name: body.full_name.trim(),
+      email: normalizedEmail,
+      terms: true,
+      device_type: body.device_type ?? "Desktop",
+      country: body.country ?? "Unknown",
+      referral_source: body.referral_source ?? "Direct",
+      campaign_source: body.campaign_source ?? "Organic",
+      time_on_page: body.time_on_page ?? 0,
       created_at: new Date(),
+      updated_at: new Date(),
     };
 
-    const result = await collection.insertOne(newEntry);
+    const result = await collection.insertOne(document);
 
-
-    return NextResponse.json(
+    return response(
       {
         success: true,
         type: "SUCCESS",
@@ -128,21 +101,44 @@ export async function POST(req: NextRequest) {
 
         data: {
           id: result.insertedId,
-          email: newEntry.email,
+          email: normalizedEmail,
         },
       },
-      { status: 201 },
+      201,
     );
-  } catch (error) {
-    console.error("WAITLIST API ERROR:", error);
+  } catch (error: any) {
 
-    return NextResponse.json(
+    if (error?.code === 11000) {
+      return response(
+        {
+          success: false,
+          type: "EMAIL_EXISTS",
+          message: "This email already exists on the waitlist",
+        },
+        409,
+      );
+    }
+
+    if (error instanceof ApiError) {
+      return response(
+        {
+          success: false,
+          type: error.type,
+          message: error.message,
+        },
+        error.status,
+      );
+    }
+
+    console.error("[WAITLIST_POST_ERROR]", error);
+
+    return response(
       {
         success: false,
         type: "SERVER_ERROR",
         message: "Something went wrong. Please try again later.",
       },
-      { status: 500 },
+      500,
     );
   }
 }
