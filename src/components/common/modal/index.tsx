@@ -1,5 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import styles from "./Modal.module.scss";
+import { GrFormClose } from "react-icons/gr";
 
 type Position =
   | "center"
@@ -12,30 +13,45 @@ type Position =
   | "left-middle"
   | "right-middle";
 
-const Modal = ({ children, id }: { children: React.ReactNode, id: string }) => {
-  const popoverRef = useRef<HTMLDivElement>(null);
-  const [position, setPosition] = useState<Position>("bottom-middle");
+type ModalProps = {
+  children: React.ReactNode;
+  id: string;
+  position?: Position;
+  showCloseButton?: boolean;
+};
 
-  const positions: Position[] = [
-    "top-left",
-    "top-middle",
-    "top-right",
-    "left-middle",
-    "center",
-    "right-middle",
-    "bottom-left",
-    "bottom-middle",
-    "bottom-right",
-  ];
+const Modal = ({
+  children,
+  id,
+  position = "center",
+  showCloseButton = true,
+}: ModalProps) => {
+  const popoverRef = useRef<HTMLDivElement>(null);
+
+  const handleClose = () => {
+    popoverRef.current?.hidePopover();
+  };
 
   return (
-    <div
-      id={id}
-      popover="auto"
-      ref={popoverRef}
-      className={styles.popover}
-    >
-      <div className={styles.popover_content}>{children}</div>
+    <div id={id} popover="auto" ref={popoverRef} className={styles.popover}>
+      <div
+        className={`${styles.popover_content} ${
+          styles[position.replace("-", "_")]
+        }`}
+      >
+        {showCloseButton && (
+          <button
+            type="button"
+            className={styles.close_button}
+            onClick={handleClose}
+            aria-label="Close modal"
+          >
+            <GrFormClose />
+          </button>
+        )}
+
+        {children}
+      </div>
     </div>
   );
 };

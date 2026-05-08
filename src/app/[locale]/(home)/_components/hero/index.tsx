@@ -1,9 +1,10 @@
-"use client"
+"use client";
 import { useTranslations } from "next-intl";
 import styles from "./styles/Hero.module.scss";
 import Button from "@/components/common/button";
 import Modal from "@/components/common/modal";
-import WaitlistFOrm from "@/app/[locale]/(home)/_components/form/Waitlist";
+import WaitlistForm from "@/app/[locale]/(home)/_components/form/Waitlist";
+import SuccessModal from "@/components/common/modal/successModal";
 
 const HeroSection = () => {
   const t = useTranslations("HomePage");
@@ -11,7 +12,6 @@ const HeroSection = () => {
     <>
       <section className={styles.hero}>
         <div className={styles.hero_wrapper}>
-          {" "}
           <div className={styles.border_round}>
             <div className={styles.hero_content}>
               <div className={styles.hero_content_left}>
@@ -28,8 +28,12 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <Modal id={"join_waitlist"}>
-        <WaitlistFOrm />
+      <Modal id="join_waitlist">
+        <WaitlistForm />
+      </Modal>
+
+      <Modal id="success_waitlist">
+        <SuccessModal />
       </Modal>
     </>
   );

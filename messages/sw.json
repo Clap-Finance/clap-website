@@ -1,13 +1,13 @@
 {
-  "Navigation": {
-    "community": "Jamii",
-    "convert": "Badilisha",
-    "contact": "Mawasiliano"
-  },
   "Translation": {
     "english": "Kiingereza",
     "french": "Kifaransa",
     "swahili": "Kiswahili"
+  },
+  "Navigation": {
+    "community": "Jamii",
+    "convert": "Badilisha",
+    "contact": "Wasiliana"
   },
   "HomePage": {
     "heroSection": {
@@ -16,9 +16,31 @@
       "cta": "Omba ufikiaji wa mapema"
     },
     "conversionSection": {
-      "title": "Badilisha pesa papo hapo kwa viwango vya moja kwa moja kati ya Naira, Cedi, na CFA — ili ujue kila wakati kiasi unachotuma na kinachowasili.",
+      "title": "Badilisha pesa papo hapo kwa viwango vya wakati halisi kati ya Naira, Cedi na CFA — ili ujue hasa unachotuma na kinachowasili.",
       "description": "Badilisha pesa zako kwa viwango bora zaidi.",
       "cta": "Omba ufikiaji wa mapema"
+    }
+  },
+  "WaitListFormSection": {
+    "title": "Jiunge na orodha ya kusubiri",
+    "description": "Kuwa miongoni mwa wa kwanza kutuma pesa kote Afrika kwa viwango halisi na bila ada zilizofichwa ukitumia Clap.",
+    "cta": "Jiunge na orodha ya kusubiri",
+    "inputFeilds": {
+      "fullName": {
+        "label": "Jina Kamili",
+        "error": "Jina kamili linahitajika"
+      },
+      "email": {
+        "label": "Barua pepe",
+        "error": "Barua pepe inahitajika"
+      }
+    }
+  },
+  "Modal": {
+    "waitlist": {
+      "title": "Uko kwenye",
+      "title_highlight": "orodha ya kusubiri!",
+      "description": "Asante kwa kujiunga na orodha ya kusubiri ya Clap. Tutakuweka taarifa na kukujulisha mara tu ufikiaji wa mapema utakapokuwa tayari."
     }
   }
 }

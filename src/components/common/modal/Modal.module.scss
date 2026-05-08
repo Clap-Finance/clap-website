@@ -6,32 +6,60 @@
   background: transparent;
 
   &::backdrop {
-    background: rgba(0, 0, 0, 0.027);
+    background: rgba(0, 0, 0, 0.563);
     animation: backdropFadeIn 0.25s ease forwards;
+  }
+
+  &_content {
+    padding: 16px;
+    background: #fff;
+    border: 8px solid #dddddd7a;
+    border-radius: $spacing-lg;
+
+    width: 100%;
+    max-width: map-get($breakpoints, xs);
+
+    position: fixed;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    transform: scale(0.85);
+    opacity: 0;
   }
 }
 
-.popover_content {
-  padding: 16px;
-  background: #fff;
-  border: 8px solid #dddddd7a;
-  border-radius: $spacing-lg;
+.close_button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: $color-gray-300;
 
-  width: 100%;
-  // min-width: 320px;
-  max-width: map-get($container-widths, sm);
+  width: 40px;
+  height: 40px;
 
-  position: fixed;
-  inset: 0;
-  margin: auto;
-  height: fit-content;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  border-radius: 50%;
+  background: #f5f5f5;
 
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  justify-content: center;
 
-  transform: scale(0.85);
-  opacity: 0;
+  transition: 0.2s ease;
+
+  svg {
+    font-size: 24px;
+  }
+
+  &:hover {
+    background: #ebebeb;
+  }
 }
 
 .popover:popover-open .popover_content {
@@ -43,10 +71,12 @@
     opacity: 0;
     scale: 0.85;
   }
+
   60% {
     opacity: 1;
     scale: 1.03;
   }
+
   100% {
     opacity: 1;
     scale: 1;
@@ -57,61 +87,58 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
-/* CENTER */
 .center {
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.85);
+  transform: translate(-50%, -50%);
 }
 
-/* TOP */
-.top-left {
+.top_left {
   top: 20px;
   left: 20px;
 }
 
-.top-middle {
+.top_middle {
   top: 20px;
   left: 50%;
-  transform: translateX(-50%) scale(0.85);
+  transform: translateX(-50%);
 }
 
-.top-right {
+.top_right {
   top: 20px;
   right: 20px;
 }
 
-/* MIDDLE SIDES */
-.left-middle {
+.left_middle {
   top: 50%;
   left: 20px;
-  transform: translateY(-50%) scale(0.85);
+  transform: translateY(-50%);
 }
 
-.right-middle {
+.right_middle {
   top: 50%;
   right: 20px;
-  transform: translateY(-50%) scale(0.85);
+  transform: translateY(-50%);
 }
 
-/* BOTTOM */
-.bottom-left {
+.bottom_left {
   bottom: 20px;
   left: 20px;
 }
 
-.bottom-middle {
+.bottom_middle {
   bottom: 20px;
   left: 50%;
-  transform: translateX(-50%) scale(0.85);
+  transform: translateX(-50%);
 }
 
-.bottom-right {
+.bottom_right {
   bottom: 20px;
   right: 20px;
 }

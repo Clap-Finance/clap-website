@@ -19,9 +19,28 @@
       "title": "Convert money instantly with real-time rates across Naira, Cedi, and CFA—so you always know exactly what you send and what arrives.",
       "description": "Convert your money with the best rates.",
       "cta": "Request early access"
-    },
-    "waitListFormSection": {
-      "title": "Join the waitlist"
+    }
+  },
+  "WaitListFormSection": {
+    "title": "Join the waitlist",
+    "description": "Be among the first to send money across Africa with real rates and zero hidden fees using Clap.",
+    "cta": "Join the waitlist",
+    "inputFeilds": {
+      "fullName": {
+        "label": "Full Name",
+        "error": "Full Name is required"
+      },
+      "email": {
+        "label": "Email",
+        "error": "Email is required"
+      }
+    }
+  },
+  "Modal": {
+    "waitlist": {
+      "title": "You’re on the",
+      "title_highlight": "waitlist!",
+      "description": "Thanks for joining the Clap waitlist. We’ll keep you updated and let you know as soon as early access is ready."
     }
   }
 }

@@ -47,7 +47,7 @@ function validatePayload(payload: WaitlistPayload) {
     throw new ApiError(400, "VALIDATION_ERROR", "Email is required");
   }
 
-  if (!EMAIL_REGEX.test(email)) {
+  if (!EMAIL_REGEX.test(email.trim())) {
     throw new ApiError(400, "VALIDATION_ERROR", "Invalid email address");
   }
 
@@ -63,7 +63,11 @@ function validatePayload(payload: WaitlistPayload) {
     time_on_page !== undefined &&
     (typeof time_on_page !== "number" || time_on_page < 0)
   ) {
-    throw new ApiError(400, "VALIDATION_ERROR", "Invalid time_on_page value");
+    throw new ApiError(
+      400,
+      "VALIDATION_ERROR",
+      "Invalid time_on_page value",
+    );
   }
 }
 
@@ -73,10 +77,15 @@ export async function POST(req: NextRequest) {
 
     validatePayload(body);
 
-    const client = await mongoClientPromise;
-    const db = client.db(process.env.DB_NAME);
-    const collection = db.collection("waitlist");
     const normalizedEmail = body.email.trim().toLowerCase();
+
+    const client = await mongoClientPromise;
+
+    const db = client.db(process.env.DB_NAME ?? "clap_waitlist");
+
+    const collection = db.collection(
+      process.env.USER_COLLECTION ?? "waitlist",
+    );
 
     const document = {
       full_name: body.full_name.trim(),
@@ -98,7 +107,6 @@ export async function POST(req: NextRequest) {
         success: true,
         type: "SUCCESS",
         message: "Successfully joined the Clap waitlist",
-
         data: {
           id: result.insertedId,
           email: normalizedEmail,
@@ -107,7 +115,6 @@ export async function POST(req: NextRequest) {
       201,
     );
   } catch (error: any) {
-
     if (error?.code === 11000) {
       return response(
         {

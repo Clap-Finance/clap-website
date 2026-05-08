@@ -6,7 +6,7 @@ import style from "./styles/ConversionSection.module.scss";
 const ConversionSection = () => {
   const t = useTranslations("HomePage");
   return (
-    <section className={style.conversion}>
+    <section className={style.conversion} id={"convert"}>
       <div className={style.conversion__container}>
         <header className={style.header}>
           <div>{t("conversionSection.description")}</div>

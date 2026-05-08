@@ -23,7 +23,7 @@ $mobile: map-get($breakpoints, md);
 
   &__links {
     display: flex;
-    gap: $spacing-sm;
+    gap: $spacing-lg;
 
     li {
       font-weight: 500;

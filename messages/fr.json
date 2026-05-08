@@ -1,24 +1,46 @@
 {
-  "Navigation": {
-    "community": "Communauté",
-    "convert": "Convertir",
-    "contact": "Contact"
-  },
   "Translation": {
     "english": "Anglais",
     "french": "Français",
     "swahili": "Swahili"
   },
+  "Navigation": {
+    "community": "Communauté",
+    "convert": "Convertir",
+    "contact": "Contact"
+  },
   "HomePage": {
     "heroSection": {
-      "title": "Déplacez votre argent comme il se doit — rapidement, simplement et sans frontières.",
-      "description": "Clap est un service de transfert d'argent qui facilite l'envoi et la réception d'argent à travers l'Afrique de l'Ouest.",
+      "title": "Envoyez de l’argent comme il se doit — rapide, simple et sans frontières.",
+      "description": "Clap est un service de transfert d’argent qui facilite l’envoi et la réception d’argent à travers l’Afrique de l’Ouest.",
       "cta": "Demander un accès anticipé"
     },
     "conversionSection": {
-      "title": "Convertissez votre argent instantanément avec des taux en temps réel entre le Naira, le Cedi et le CFA — pour toujours savoir exactement ce que vous envoyez et ce qui est reçu.",
-      "description": "Convertissez votre argent aux meilleurs taux.",
+      "title": "Convertissez votre argent instantanément avec des taux en temps réel entre le Naira, le Cedi et le CFA — pour toujours savoir exactement ce que vous envoyez et ce qui arrive.",
+      "description": "Convertissez votre argent avec les meilleurs taux.",
       "cta": "Demander un accès anticipé"
+    }
+  },
+  "WaitListFormSection": {
+    "title": "Rejoignez la liste d’attente",
+    "description": "Soyez parmi les premiers à envoyer de l’argent à travers l’Afrique avec des taux réels et zéro frais cachés grâce à Clap.",
+    "cta": "Rejoindre la liste d’attente",
+    "inputFeilds": {
+      "fullName": {
+        "label": "Nom complet",
+        "error": "Le nom complet est requis"
+      },
+      "email": {
+        "label": "E-mail",
+        "error": "L’e-mail est requis"
+      }
+    }
+  },
+  "Modal": {
+    "waitlist": {
+      "title": "Vous êtes sur la",
+      "title_highlight": "liste d’attente !",
+      "description": "Merci d’avoir rejoint la liste d’attente Clap. Nous vous tiendrons informé et vous préviendrons dès que l’accès anticipé sera disponible."
     }
   }
 }
