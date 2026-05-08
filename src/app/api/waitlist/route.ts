@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import mongoClientPromise from "@/lib/mongodb";
 import { WaitlistPayload } from "@/types/waitlist";
+import { buildWaitlistConfirmationEmail } from "@/lib/mail/templates/waitlist-confirmation";
+import { sendMail } from "@/lib/mail/send-email";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
 
@@ -19,7 +21,6 @@ class ApiError extends Error {
 
   constructor(status: number, type: string, message: string) {
     super(message);
-
     this.status = status;
     this.type = type;
   }
@@ -63,11 +64,7 @@ function validatePayload(payload: WaitlistPayload) {
     time_on_page !== undefined &&
     (typeof time_on_page !== "number" || time_on_page < 0)
   ) {
-    throw new ApiError(
-      400,
-      "VALIDATION_ERROR",
-      "Invalid time_on_page value",
-    );
+    throw new ApiError(400, "VALIDATION_ERROR", "Invalid time_on_page value");
   }
 }
 
@@ -80,12 +77,23 @@ export async function POST(req: NextRequest) {
     const normalizedEmail = body.email.trim().toLowerCase();
 
     const client = await mongoClientPromise;
-
     const db = client.db(process.env.DB_NAME ?? "clap_waitlist");
+    const collection = db.collection(process.env.USER_COLLECTION ?? "waitlist");
 
-    const collection = db.collection(
-      process.env.USER_COLLECTION ?? "waitlist",
-    );
+    const existingUser = await collection.findOne({
+      email: normalizedEmail,
+    });
+
+    if (existingUser) {
+      return response(
+        {
+          success: false,
+          type: "EMAIL_EXISTS",
+          message: "This email already exists on the waitlist",
+        },
+        409,
+      );
+    }
 
     const document = {
       full_name: body.full_name.trim(),
@@ -101,6 +109,18 @@ export async function POST(req: NextRequest) {
     };
 
     const result = await collection.insertOne(document);
+
+    const { subject, html, text } = buildWaitlistConfirmationEmail({
+      full_name: body.full_name.trim(),
+      email: normalizedEmail,
+    });
+
+    sendMail({ to: normalizedEmail, subject, html, text }).catch((err) => {
+      console.error("[WAITLIST_EMAIL_ERROR]", {
+        email: normalizedEmail,
+        error: err?.message ?? err,
+      });
+    });
 
     return response(
       {
