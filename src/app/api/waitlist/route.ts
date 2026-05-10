@@ -77,7 +77,7 @@ export async function POST(req: NextRequest) {
     const normalizedEmail = body.email.trim().toLowerCase();
 
     const client = await mongoClientPromise;
-    const db = client.db(process.env.DB_NAME ?? "clap_waitlist");
+    const db = client.db(process.env.MONGODB_DB_NAME ?? "clap_waitlist");
     const collection = db.collection(process.env.USER_COLLECTION ?? "waitlist");
 
     const existingUser = await collection.findOne({

@@ -132,7 +132,7 @@ const WaitlistForm = () => {
           required: "Email is required",
           pattern: {
             value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-            message: `${t("inputFeilds.fullName.label")}`,
+            message: `${t("inputFeilds.email.label")}`,
           },
         })}
       />
