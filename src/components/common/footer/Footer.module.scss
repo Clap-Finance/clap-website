@@ -2,37 +2,125 @@
 
 .footer {
   width: 100%;
-  border-top: 1px solid $bg-section-border;
-  padding: 7rem 0 2rem;
-  position: relative;
-  overflow: hidden;
-  background: $color-black;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-      circle at bottom left,
-      rgba(42, 83, 241, 0.15),
-      transparent 40%
-    );
-    pointer-events: none;
-  }
+  padding: $spacing-md;
+  color: $color-white;
 
   &__wrapper {
     width: min(100% - 32px, $container-xxl);
     margin-inline: auto;
-    position: relative;
-    z-index: 2;
+    background: $color-black;
+
+    width: 100%;
+    max-width: $xxl;
+    border-radius: $radius-xl;
+    margin: auto;
+    padding: $spacing-md;
+    overflow: hidden;
   }
 
-  &__top {
+  &__cta {
+    width: 100%;
+    min-height: 34rem;
+
+    border-radius: $radius-lg;
+     border: 2px solid $bg-section-border;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.01) 100%
+      ),
+      #050505;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 4rem;
+
+    @media screen and (max-width: $md) {
+      min-height: 28rem;
+      padding: 2rem;
+      border-radius: 2rem;
+    }
+  }
+
+  &__ctaGlow {
+    position: absolute;
+    inset: 0;
+
+    background:
+      radial-gradient(
+        circle at top,
+        #c3ff4046,
+        transparent 50%
+      );
+
+    pointer-events: none;
+  }
+
+  &__ctaContent {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 42rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    gap: 1.5rem;
+
+    span {
+      color: $color-accent;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: $letter-spacing-sm;
+    }
+
+    h2 {
+      color: $color-white;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      line-height: 105%;
+      letter-spacing: -0.05em;
+      font-weight: 600;
+
+      @media screen and (max-width: $sm) {
+        font-size: 2.5rem;
+      }
+    }
+
+    p {
+      max-width: 34rem;
+
+      color: rgba($color-white, 0.68);
+      line-height: 170%;
+      font-size: 1rem;
+    }
+  }
+
+  /* =========================
+      FLOATING ORBS
+  ========================= */
+
+
+
+  &__main {
+    padding-inline: $spacing-lg;
+    padding-bottom: 3rem;
+
     display: flex;
     justify-content: space-between;
     gap: 5rem;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid $bg-section-border;
+
+    border-bottom: 1px solid rgba($color-white, 0.08);
 
     @media screen and (max-width: $lg) {
       flex-direction: column;
@@ -42,22 +130,22 @@
 
   &__brand {
     width: 100%;
-    max-width: 28rem;
+    max-width: 20rem;
 
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 
     p {
-      color: rgba($color-white, 0.72);
-      font-size: 0.95rem;
+      color: rgba($color-white, 0.7);
       line-height: 170%;
-      letter-spacing: $letter-spacing-sm;
+      font-size: 1rem;
     }
   }
 
   &__links {
     width: 100%;
+
     display: flex;
     justify-content: flex-end;
     gap: 5rem;
@@ -77,9 +165,11 @@
     gap: 1.2rem;
 
     span {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
+
       color: rgba($color-white, 0.45);
+
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
@@ -95,7 +185,10 @@
         a {
           color: rgba($color-white, 0.78);
           text-decoration: none;
+
           font-size: 0.95rem;
+          line-height: 150%;
+
           transition: all 0.25s ease;
 
           &:hover {
@@ -106,7 +199,9 @@
     }
   }
 
+
   &__bottom {
+     padding-inline: $spacing-lg;
     padding-top: 2rem;
 
     display: flex;
@@ -121,7 +216,7 @@
 
     p,
     span {
-      color: rgba($color-white, 0.45);
+      color: rgba($color-white, 0.42);
       font-size: 0.85rem;
       line-height: 150%;
     }

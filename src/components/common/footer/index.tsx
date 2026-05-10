@@ -1,13 +1,14 @@
 "use client";
 
-import React from "react";
 import style from "./Footer.module.scss";
 import Logo from "../logo";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import Button from "../button";
 
 const Footer = () => {
   const t = useTranslations("Footer");
+  const hero = useTranslations("HomePage");
 
   const navigation = [
     {
@@ -30,9 +31,24 @@ const Footer = () => {
   return (
     <footer className={style.footer} id="contact">
       <div className={style.footer__wrapper}>
-        <div className={style.footer__top}>
+        <div className={style.footer__cta}>
+          <div className={style.footer__ctaGlow} />
+          <div className={style.footer__ctaContent}>
+            <span>{t("tag")}</span>
+
+            <h2>{t("title")}</h2>
+
+            <p>{t("description")}</p>
+
+            <Button popoverTarget="join_waitlist">
+              {hero("heroSection.cta")}
+            </Button>
+          </div>
+        </div>
+
+        <div className={style.footer__main}>
           <div className={style.footer__brand}>
-            <Logo variant="light"/>
+            <Logo variant="light" />
 
             <p>{t("description")}</p>
           </div>
@@ -93,11 +109,7 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <a
-                    href="mailto:hello@clapmoney.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href="mailto:hello@clapmoney.com">
                     hello@clapmoney.com
                   </a>
                 </li>
