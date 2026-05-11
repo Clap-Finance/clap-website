@@ -23,7 +23,7 @@
     min-height: 34rem;
 
     border-radius: $radius-lg;
-     border: 2px solid $bg-section-border;
+    border: 2px solid $bg-section-border;
 
     background:
       linear-gradient(
@@ -53,12 +53,7 @@
     position: absolute;
     inset: 0;
 
-    background:
-      radial-gradient(
-        circle at top,
-        #c3ff4046,
-        transparent 50%
-      );
+    background: radial-gradient(circle at top, #c3ff4046, transparent 50%);
 
     pointer-events: none;
   }
@@ -105,7 +100,6 @@
       font-size: 1rem;
     }
   }
-
 
   &__main {
     padding-inline: $spacing-lg;
@@ -194,9 +188,8 @@
     }
   }
 
-
   &__bottom {
-     padding-inline: $spacing-lg;
+    padding-inline: $spacing-lg;
     padding-top: 2rem;
 
     display: flex;
@@ -218,10 +211,11 @@
   }
 
   &__disclaimer {
-color: rgba($color-white, 0.5);
-padding: $spacing-lg;
-display: grid;
-gap: $spacing-sm;
-font-size: 0.8rem;
+    color: rgba($color-white, 0.5);
+    padding: $spacing-lg;
+    display: grid;
+    gap: $spacing-sm;
+    font-size: 0.8rem;
+    text-align: justify;
   }
 }
