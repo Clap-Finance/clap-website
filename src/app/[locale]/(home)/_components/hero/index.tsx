@@ -5,6 +5,8 @@ import Button from "@/components/common/button";
 import Modal from "@/components/common/modal";
 import WaitlistForm from "@/app/[locale]/(home)/_components/form/Waitlist";
 import SuccessModal from "@/components/common/modal/successModal";
+import Image from "next/image";
+import heroImage from "@/assets/brand/hands.png";
 
 const HeroSection = () => {
   const t = useTranslations("HomePage");
@@ -22,6 +24,17 @@ const HeroSection = () => {
                 <Button variant={"secondary"} popoverTarget="join_waitlist">
                   {t("heroSection.cta")}
                 </Button>
+              </div>
+
+               <div className={styles.hero_content_right}>
+                <div className={styles.hero_image_wrapper}>
+                  <Image
+                    src={heroImage}
+                    alt="Clap mobile money transfer"
+                    priority
+                    className={styles.hero_image}
+                  />
+                </div>
               </div>
             </div>
           </div>
