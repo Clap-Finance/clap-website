@@ -3,11 +3,9 @@ import React, { useEffect, useRef, useState } from "react";
 import style from "./styles/ConverterSlider.module.scss";
 
 import driver from "./assets/driver.webp";
-import friends from "./assets/friends.webp";
 import individual from "./assets/individual.webp";
 import tailor from "./assets/tailor.webp";
 import trader from "./assets/trader.webp";
-import { Global } from "iconsax-reactjs";
 
 const slides = [
   {
@@ -95,10 +93,14 @@ const ConverterSlider = () => {
         </div>
       </div>
 
-      <div className={style.track}>
-        {slides.map((_, i) => (
-          <div
+      <div className={style.track} role="tablist" aria-label="Slide navigation">
+        {slides.map((slide, i) => (
+          <button
             key={i}
+            type="button"
+            role="tab"
+            aria-selected={i === cur}
+            aria-label={`Slide ${i + 1}: ${slide.heading.join(" ")}`}
             className={`${style.tick} ${i === cur ? style.active : ""}`}
             onClick={() => {
               goTo(i);

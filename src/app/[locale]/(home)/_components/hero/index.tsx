@@ -32,6 +32,7 @@ const HeroSection = () => {
                     src={heroImage}
                     alt="Clap mobile money transfer"
                     priority
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className={styles.hero_image}
                   />
                 </div>

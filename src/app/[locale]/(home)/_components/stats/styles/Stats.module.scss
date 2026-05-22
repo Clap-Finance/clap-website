@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "@/scss/index" as *;
 
 .stats {
@@ -71,13 +72,13 @@
   &__card:first-child {
     background-color: $color-accent;
 
-    &_number {
-      color: $color-black;
-    }
-
     &:hover {
-      background-color: lighten($color-accent, 3%);
+      background-color: color.adjust($color-accent, $lightness: 3%);
     }
+  }
+
+  &__card:first-child &__card_number {
+    color: $color-black;
   }
 
   @media (max-width: 768px) {

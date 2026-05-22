@@ -8,8 +8,10 @@ const Logo = ({ variant = "dark" }: { variant?: "light" | "dark" }) => {
     <Link href={"/"} className="flex items-center gap-1">
       <Image
         src={variant == "dark" ? LogoImage : LogoLightImage}
-        alt="Logo"
+        alt="Clap"
+        sizes="(max-width: 768px) 80px, 88px"
         className="w-20 md:w-22"
+        priority
       />
     </Link>
   );

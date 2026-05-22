@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import {
   RiArrowDownSLine,
   RiExchangeDollarLine,
@@ -50,9 +50,8 @@ const Convertor: React.FC = () => {
   const [rate, setRate]               = useState<number | null>(null);
   const [loading, setLoading]         = useState(false);
   const [error, setError]             = useState<string | null>(null);
-  const [fromOpen, setFromOpen]       = useState(false);
-  const [toOpen, setToOpen]           = useState(false);
-  const [lastFetched, setLastFetched] = useState<Date | null>(null);
+  const [fromOpen, setFromOpen] = useState(false);
+  const [toOpen, setToOpen]     = useState(false);
 
   const fromRef = useRef<HTMLDivElement>(null);
   const toRef   = useRef<HTMLDivElement>(null);
@@ -74,7 +73,6 @@ const Convertor: React.FC = () => {
       const data = await res.json();
       if (data.result === "success" && data.rates[toCur.code]) {
         setRate(data.rates[toCur.code]);
-        setLastFetched(new Date());
       } else {
         setError("Rate unavailable");
       }
@@ -112,12 +110,17 @@ const Convertor: React.FC = () => {
             value={amount}
             onChange={handleAmountChange}
             placeholder="0.00"
+            aria-label={`Amount to send in ${fromCur.code}`}
           />
 
           <div className="conversion__dropdown" ref={fromRef}>
             <button
+              type="button"
               className="conversion__cur-btn"
               onClick={() => { setFromOpen((o) => !o); setToOpen(false); }}
+              aria-haspopup="listbox"
+              aria-expanded={fromOpen}
+              aria-label={`Select source currency, currently ${fromCur.name}`}
             >
               <span className="conversion__flag">{fromCur.flag}</span>
               <span className="conversion__cur-code">{fromCur.code}</span>
@@ -125,10 +128,12 @@ const Convertor: React.FC = () => {
             </button>
 
             {fromOpen && (
-              <ul className="conversion__menu">
+              <ul className="conversion__menu" role="listbox" aria-label="Source currency">
                 {SOURCE_CURRENCIES.map((c) => (
                   <li
                     key={c.code}
+                    role="option"
+                    aria-selected={c.code === fromCur.code}
                     className={`conversion__menu-item ${c.code === fromCur.code ? "active" : ""}`}
                     onClick={() => { setFromCur(c); setFromOpen(false); }}
                   >
@@ -187,8 +192,12 @@ const Convertor: React.FC = () => {
 
           <div className="conversion__dropdown" ref={toRef}>
             <button
+              type="button"
               className="conversion__cur-btn"
               onClick={() => { setToOpen((o) => !o); setFromOpen(false); }}
+              aria-haspopup="listbox"
+              aria-expanded={toOpen}
+              aria-label={`Select destination currency, currently ${toCur.name}`}
             >
               <span className="conversion__flag">{toCur.flag}</span>
               <span className="conversion__cur-code">{toCur.code}</span>
@@ -196,10 +205,12 @@ const Convertor: React.FC = () => {
             </button>
 
             {toOpen && (
-              <ul className="conversion__menu conversion__menu--right">
+              <ul className="conversion__menu conversion__menu--right" role="listbox" aria-label="Destination currency">
                 {WEST_AFRICAN_CURRENCIES.map((c) => (
                   <li
                     key={c.code}
+                    role="option"
+                    aria-selected={c.code === toCur.code}
                     className={`conversion__menu-item ${c.code === toCur.code ? "active" : ""}`}
                     onClick={() => { setToCur(c); setToOpen(false); }}
                   >

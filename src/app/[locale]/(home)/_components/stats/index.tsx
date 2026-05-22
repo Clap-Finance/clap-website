@@ -83,53 +83,44 @@ const Stats = () => {
     <div className={styles.stats} ref={sectionRef}>
       <div className={styles.stats__container}>
         <div className={styles.stats__card}>
-          <div>
+          <div aria-hidden="true">
             <Profile2User size="32" color="#555555" variant="TwoTone" />
           </div>
-
           <div>
             <NumberFlow
               className={styles.stats__card_number}
               value={displayValues.signups}
+              aria-label={`${displayValues.signups} people on the waitlist`}
             />
-
-            <h3>
-              People on <br /> the waitlist
-            </h3>
+            <h3>People on <br /> the waitlist</h3>
           </div>
         </div>
 
         <div className={styles.stats__card}>
-          <div>
+          <div aria-hidden="true">
             <Global size="32" color="#555555" variant="TwoTone" />
           </div>
-
           <div>
             <NumberFlow
               className={styles.stats__card_number}
               value={displayValues.countries}
+              aria-label={`${displayValues.countries} countries with early signups`}
             />
-
-            <h3>
-              Countries with <br /> early signups
-            </h3>
+            <h3>Countries with <br /> early signups</h3>
           </div>
         </div>
 
         <div className={styles.stats__card}>
-          <div>
+          <div aria-hidden="true">
             <Moneys size="32" color="#555555" variant="TwoTone" />
           </div>
-
           <div>
             <NumberFlow
               className={styles.stats__card_number}
               value={displayValues.topCountry}
+              aria-label={`${displayValues.topCountry} signups in the top country`}
             />
-
-            <h3>
-              Top <br /> Country
-            </h3>
+            <h3>Top <br /> Country</h3>
           </div>
         </div>
       </div>

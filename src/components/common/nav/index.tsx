@@ -32,7 +32,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className={style.nav}>
+      <nav className={style.nav} aria-label="Main navigation">
         <div className={style.nav__wrapper}>
           <div className={style.links}>
             <Logo />
@@ -53,16 +53,18 @@ const Nav = () => {
             </Button>
 
             <button
+              type="button"
               className={style.nav__hamburger}
               onClick={() => setMenuOpen(true)}
-              aria-label="Open menu"
+              aria-label="Open navigation menu"
               aria-expanded={menuOpen}
+              aria-controls="nav-drawer"
             >
               <HamburgerMenu size={24} variant="TwoTone" />
             </button>
           </div>
         </div>
-      </div>
+      </nav>
 
       <div
         className={`${style.nav__backdrop} ${menuOpen ? style["nav__backdrop--open"] : ""}`}
@@ -71,6 +73,7 @@ const Nav = () => {
       />
 
       <div
+        id="nav-drawer"
         className={`${style.nav__drawer} ${menuOpen ? style["nav__drawer--open"] : ""}`}
         role="dialog"
         aria-modal="true"
@@ -79,9 +82,10 @@ const Nav = () => {
         <div className={style.nav__drawerHeader}>
           <Logo />
           <button
+            type="button"
             className={style.nav__close}
             onClick={close}
-            aria-label="Close menu"
+            aria-label="Close navigation menu"
           >
             <CloseCircle size={28} variant="TwoTone" />
           </button>
