@@ -19,12 +19,13 @@
   &_wrapper {
     background-color: $color-primary;
     width: 100%;
-    max-width: $xxl;
+    max-width: $hd;
     height: calc(100vh - 95px);
     border-radius: $radius-xl;
     margin: auto;
     padding: $spacing-md;
     overflow: hidden;
+
   }
 
   &_content {
@@ -37,7 +38,7 @@
     &_left {
       width: 100%;
       height: 100%;
-      max-width: $sm;
+      max-width: $md;
       display: flex;
       flex-direction: column;
       align-items: start;
@@ -50,8 +51,8 @@
         gap: $spacing-md;
 
         h1 {
-          font-size: useAdvanceClamp(350, 1140, 40, 56);
-          line-height: useAdvanceClamp(350, 1140, 48, 50);
+          font-size: useAdvanceClamp(350, 1140, 40, 80);
+          line-height: useAdvanceClamp(350, 1140, 48, 70);
           letter-spacing: -0.15rem;
           font-weight: 500;
           animation: $animation-reveal-up;
@@ -74,6 +75,7 @@
 
   @media (max-width: $container-lg) {
     padding-top: 3rem;
+    padding-inline: 0;
   }
 }
 

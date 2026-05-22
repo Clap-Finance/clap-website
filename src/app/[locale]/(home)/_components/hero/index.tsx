@@ -26,7 +26,7 @@ const HeroSection = () => {
                 </Button>
               </div>
 
-               <div className={styles.hero_content_right}>
+              {/* <div className={styles.hero_content_right}>
                 <div className={styles.hero_image_wrapper}>
                   <Image
                     src={heroImage}
@@ -36,7 +36,7 @@ const HeroSection = () => {
                     className={styles.hero_image}
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
