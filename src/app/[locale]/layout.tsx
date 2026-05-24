@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import Nav from "@/components/common/nav";
 import Footer from "@/components/common/footer";
+import CookieBanner from "@/components/common/cookie-banner";
 
 const interSans = Inter({
   variable: "--font-inter-sans",
@@ -81,7 +82,7 @@ const jsonLd = {
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
   sameAs: ["https://x.com/clapfinance", "https://instagram.com/clapfinance"],
-  contactPoint: { "@type": "ContactPoint", email: "hello@clapmoney.com", contactType: "customer support" },
+  contactPoint: { "@type": "ContactPoint", email: process.env.CLAP_CONTACT_EMAIL ?? "hello@clapmoney.com", contactType: "customer support" },
   description: "Clap helps businesses and drivers receive money faster with instant transfers, QR payments, and seamless collections built for everyday Nigerian commerce.",
 };
 
@@ -116,6 +117,7 @@ export default async function RootLayout({
             {children}
           </main>
           <Footer />
+          <CookieBanner />
         </NextIntlClientProvider>
       </body>
     </html>

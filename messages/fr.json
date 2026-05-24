@@ -48,6 +48,14 @@
     }
   },
 
+  "CookieBanner": {
+    "label": "Consentement aux cookies",
+    "message": "Nous utilisons des cookies pour améliorer votre expérience et analyser l'utilisation du site.",
+    "learnMore": "En savoir plus",
+    "accept": "Accepter",
+    "decline": "Refuser"
+  },
+
   "Footer": {
     "tag": "Conçu pour le commerce nigérian.",
     "title": "Déplacez votre argent plus rapidement avec Clap",

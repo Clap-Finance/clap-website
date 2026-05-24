@@ -49,6 +49,14 @@
     }
   },
 
+  "CookieBanner": {
+    "label": "Idhini ya vidakuzi",
+    "message": "Tunatumia vidakuzi kuboresha uzoefu wako na kuchambua matumizi ya tovuti.",
+    "learnMore": "Jifunza zaidi",
+    "accept": "Kubali",
+    "decline": "Kataa"
+  },
+
   "Footer": {
     "tag": "Wasiliana nasi.",
     "title": "Fuata safari yetu",

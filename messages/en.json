@@ -48,6 +48,14 @@
     }
   },
 
+  "CookieBanner": {
+    "label": "Cookie consent",
+    "message": "We use cookies to improve your experience and analyse site usage.",
+    "learnMore": "Learn more",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+
   "Footer": {
     "tag": "Built for Nigerian commerce.",
     "title": "Move money faster with Clap",

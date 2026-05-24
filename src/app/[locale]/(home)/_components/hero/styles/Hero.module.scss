@@ -21,14 +21,18 @@
     width: 100%;
     max-width: $hd;
     height: calc(100vh - 95px);
+    min-height: $xs;
+    max-height: $md;
     border-radius: $radius-xl;
     margin: auto;
     padding: $spacing-md;
     overflow: hidden;
 
+    position: relative;
   }
 
   &_content {
+
     width: 100%;
     height: 100%;
     display: grid;
@@ -51,8 +55,8 @@
         gap: $spacing-md;
 
         h1 {
-          font-size: useAdvanceClamp(350, 1140, 40, 80);
-          line-height: useAdvanceClamp(350, 1140, 48, 70);
+          font-size: useAdvanceClamp(350, 1140, 40, 64);
+          line-height: useAdvanceClamp(350, 1140, 48, 64);
           letter-spacing: -0.15rem;
           font-weight: 500;
           animation: $animation-reveal-up;
@@ -62,6 +66,14 @@
           max-width: $xs;
         }
       }
+    }
+
+    &_right {
+      position: absolute;
+      width: 100%;
+      max-width: $sm;
+      right: 10%;
+      bottom: -25%;
     }
   }
 }
