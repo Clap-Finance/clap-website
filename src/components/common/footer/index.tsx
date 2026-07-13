@@ -86,6 +86,15 @@ const Footer = () => {
               <ul>
                 <li>
                   <a
+                    href="https://www.linkedin.com/company/clap-mobilemoney"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://x.com/clapfinance"
                     target="_blank"
                     rel="noopener noreferrer"
