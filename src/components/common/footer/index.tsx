@@ -105,8 +105,8 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <a href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@clapmoney.com"}`}>
-                    {process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@clapmoney.com"}
+                  <a href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "info@clapfinance.com"}`}>
+                    {process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "info@clapfinance.com"}
                   </a>
                 </li>
               </ul>

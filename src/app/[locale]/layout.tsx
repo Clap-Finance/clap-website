@@ -82,7 +82,7 @@ const jsonLd = {
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
   sameAs: ["https://x.com/clapfinance", "https://instagram.com/clapfinance"],
-  contactPoint: { "@type": "ContactPoint", email: process.env.CLAP_CONTACT_EMAIL ?? "hello@clapmoney.com", contactType: "customer support" },
+  contactPoint: { "@type": "ContactPoint", email: process.env.CLAP_CONTACT_EMAIL ?? "info@clapfinance.com", contactType: "customer support" },
   description: "Clap helps businesses and drivers receive money faster with instant transfers, QR payments, and seamless collections built for everyday Nigerian commerce.",
 };
 

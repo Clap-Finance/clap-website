@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./styles/Page.module.scss";
 
-const CONTACT_EMAIL = process.env.CLAP_CONTACT_EMAIL ?? "hello@clapmoney.com";
+const CONTACT_EMAIL = process.env.CLAP_CONTACT_EMAIL ?? "info@clapfinance.com";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
