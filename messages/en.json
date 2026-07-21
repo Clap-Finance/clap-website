@@ -1,32 +1,33 @@
 {
   "Navigation": {
     "community": "Businesses",
-    "convert": "Drivers",
+    "convert": "Individuals",
     "contact": "Contact"
   },
 
   "Translation": {
     "english": "English",
-    "french": "French"
+    "french": "Français",
+    "swahili": "Kiswahili"
   },
 
   "HomePage": {
     "heroSection": {
-      "title": "Accept payments instantly across Nigeria.",
-      "description": "Clap helps businesses and drivers receive money faster with instant transfers, QR payments, and seamless collections built for everyday commerce.",
-      "cta": "Request early access"
+      "title": "The WhatsApp-first platform for global payments.",
+      "description": "Receive international payments, hold multiple currencies, exchange funds, and send money across borders through a WhatsApp-first experience designed for individuals and businesses.",
+      "cta": "Join the waitlist"
     },
 
     "conversionSection": {
-      "title": "Built for ride payments, business collections, and everyday transfers.",
-      "description": "Pay for rides, collect payments, and move money instantly with a faster and simpler payment experience.",
-      "cta": "Request early access"
+      "title": "Global finance, built WhatsApp-first.",
+      "description": "Whether you're a freelancer, remote worker, business owner, or supporting family abroad, Clap makes receiving, holding, converting, and sending money across borders effortless through a WhatsApp-first experience—with a dedicated mobile app coming soon.",
+      "cta": "Get early access"
     }
   },
 
   "WaitListFormSection": {
     "title": "Join the waitlist",
-    "description": "Be among the first businesses, drivers, and early users to experience instant payments with Clap.",
+    "description": "Be among the first to experience WhatsApp-first global finance with international accounts, multi-currency balances, and seamless cross-border payments.",
     "cta": "Join the waitlist",
     "inputFeilds": {
       "fullName": {
@@ -35,52 +36,48 @@
       },
       "email": {
         "label": "Email",
-        "error": "Enter a valid email"
+        "error": "Enter a valid email address"
       }
     }
   },
 
   "Modal": {
     "waitlist": {
-      "title": "You’re on the",
+      "title": "You're on the",
       "title_highlight": "waitlist!",
-      "description": "Thanks for joining the Clap waitlist. We’ll keep you updated as we prepare early access across Nigeria."
+      "description": "Thanks for joining the Clap waitlist. We'll let you know as soon as early access becomes available."
     }
   },
 
   "CookieBanner": {
     "label": "Cookie consent",
-    "message": "We use cookies to improve your experience and analyse site usage.",
+    "message": "We use cookies to improve your experience and analyze site usage.",
     "learnMore": "Learn more",
     "accept": "Accept",
     "decline": "Decline"
   },
 
   "Footer": {
-    "tag": "Built for Nigerian commerce.",
-    "title": "Move money faster with Clap",
-    "description": "Clap is building modern payment infrastructure for Nigeria — helping businesses, drivers, and everyday users send and receive money instantly.",
+    "tag": "WhatsApp-first. Global by design.",
+    "title": "Global payments, built WhatsApp-first.",
+    "description": "Clap is a WhatsApp-first financial platform that helps individuals and businesses receive international payments, manage multiple currencies, exchange funds, and move money across borders with ease.",
     "navigation": "Navigation",
     "company": "Company",
     "socials": "Socials",
     "copyright": "© 2026 Clap. All rights reserved.",
-    "built": "Built for speed. Designed for trust.",
+    "built": "Built WhatsApp-first. Designed for the world.",
     "links": {
       "community": "Businesses",
-      "convert": "Drivers",
+      "convert": "Individuals",
       "contact": "Contact",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
     },
     "disclaimer": {
-      "paragraph1": "Clap is a financial technology company, not a bank. Financial services are provided through licensed banking and payment partners in Nigeria.",
-
-      "paragraph2": "Clap provides technology and infrastructure that enable users and businesses to send, receive, and manage digital payments securely and efficiently.",
-
-      "paragraph3": "Payment processing, wallet services, settlements, and related financial services may be facilitated through regulated third-party financial institutions and payment providers.",
-
-      "paragraph4": "Certain services may be subject to eligibility requirements, transaction limits, compliance checks, and regulatory approvals.",
-
+      "paragraph1": "Clap is a financial technology company and is not a bank. Banking and payment services are provided through licensed financial institution partners.",
+      "paragraph2": "Clap provides technology that enables users to receive international payments, hold and exchange multiple currencies, and send money across supported payment networks.",
+      "paragraph3": "Account issuance, payment processing, settlements, foreign exchange, and related financial services are provided by regulated third-party financial institutions and payment partners.",
+      "paragraph4": "Products and services may vary by country and are subject to eligibility requirements, regulatory approvals, compliance checks, and transaction limits.",
       "paragraph5": "All trademarks, logos, and brand names are the property of their respective owners."
     }
   }

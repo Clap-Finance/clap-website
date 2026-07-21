@@ -6,6 +6,7 @@ import { getMessages } from "next-intl/server";
 import Nav from "@/components/common/nav";
 import Footer from "@/components/common/footer";
 import CookieBanner from "@/components/common/cookie-banner";
+import Script from "next/script";
 
 const interSans = Inter({
   variable: "--font-inter-sans",
@@ -119,6 +120,21 @@ export default async function RootLayout({
           <Footer />
           <CookieBanner />
         </NextIntlClientProvider>
+
+        <Script id="tawk-to" strategy="afterInteractive">
+          {`
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+              var s1=document.createElement("script"),
+                  s0=document.getElementsByTagName("script")[0];
+              s1.async=true;
+              s1.src='https://embed.tawk.to/6a5f8604261fbd1d47c5b4dc/1ju2i71bq';
+              s1.charset='UTF-8';
+              s1.setAttribute('crossorigin','*');
+              s0.parentNode.insertBefore(s1,s0);
+            })();
+          `}
+        </Script>
       </body>
     </html>
   );

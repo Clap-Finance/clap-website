@@ -1,88 +1,77 @@
 {
   "Navigation": {
-    "community": "Jamii",
-    "convert": "Badilisha",
-    "contact": "Wasiliana"
+    "community": "Biashara",
+    "convert": "Watu Binafsi",
+    "contact": "Wasiliana Nasi"
   },
-
   "Translation": {
-    "english": "Kiingereza",
-    "french": "Kifaransa",
+    "english": "English",
+    "french": "Français",
     "swahili": "Kiswahili"
   },
-
   "HomePage": {
     "heroSection": {
-      "title": "Hamisha pesa kama inavyopaswa — haraka, rahisi na bila mipaka.",
-      "description": "Clap inajenga mustakabali wa uhamishaji wa pesa Afrika — kusaidia watu kutuma, kupokea na kubadilisha pesa kuvuka mipaka kwa haraka na uwazi.",
-      "cta": "Omba ufikiaji wa mapema"
+      "title": "Jukwaa la malipo ya kimataifa linaloanzia WhatsApp.",
+      "description": "Pokea malipo ya kimataifa, hifadhi sarafu mbalimbali, badilisha fedha, na tuma pesa nje ya nchi kupitia uzoefu ulioundwa kwa ajili ya WhatsApp, ukiwa umeundwa kwa watu binafsi na biashara.",
+      "cta": "Jiunge na orodha ya kusubiri"
     },
-
     "conversionSection": {
-      "title": "Badilisha pesa papo hapo kwa viwango vya wakati halisi kati ya Naira, Cedi na CFA — ili ujue unachotuma na kupokea kila wakati.",
-      "description": "Badilisha pesa kwa viwango bora.",
-      "cta": "Omba ufikiaji wa mapema"
+      "title": "Fedha za kimataifa, zilizojengwa kuanzia WhatsApp.",
+      "description": "Iwe wewe ni mfanyakazi huru, mfanyakazi wa mbali, mmiliki wa biashara, au unasaidia familia iliyo nje ya nchi, Clap inarahisisha kupokea, kuhifadhi, kubadilisha, na kutuma pesa nje ya mipaka kupitia uzoefu unaoanzia WhatsApp—huku programu maalum ya simu ikija hivi karibuni.",
+      "cta": "Pata ufikiaji wa mapema"
     }
   },
-
   "WaitListFormSection": {
     "title": "Jiunge na orodha ya kusubiri",
-    "description": "Kuwa miongoni mwa wa kwanza kutuma pesa kote Afrika kwa viwango halisi bila ada zilizofichwa kupitia Clap.",
+    "description": "Kuwa miongoni mwa wa kwanza kupata uzoefu wa fedha za kimataifa unaoanzia WhatsApp, ukiwa na akaunti za kimataifa, salio za sarafu mbalimbali, na malipo ya nje ya nchi kwa urahisi.",
     "cta": "Jiunge na orodha ya kusubiri",
     "inputFeilds": {
       "fullName": {
-        "label": "Jina kamili",
+        "label": "Jina Kamili",
         "error": "Jina kamili linahitajika"
       },
       "email": {
-        "label": "Barua pepe",
-        "error": "Weka barua pepe halali"
+        "label": "Barua Pepe",
+        "error": "Weka anwani sahihi ya barua pepe"
       }
     }
   },
-
   "Modal": {
     "waitlist": {
       "title": "Uko kwenye",
       "title_highlight": "orodha ya kusubiri!",
-      "description": "Asante kwa kujiunga na orodha ya kusubiri ya Clap. Tutakujulisha mara tu ufikiaji wa mapema utakapokuwa tayari."
+      "description": "Asante kwa kujiunga na orodha ya kusubiri ya Clap. Tutakujulisha mara tu ufikiaji wa mapema utakapopatikana."
     }
   },
-
   "CookieBanner": {
     "label": "Idhini ya vidakuzi",
     "message": "Tunatumia vidakuzi kuboresha uzoefu wako na kuchambua matumizi ya tovuti.",
-    "learnMore": "Jifunza zaidi",
+    "learnMore": "Jifunze zaidi",
     "accept": "Kubali",
     "decline": "Kataa"
   },
-
   "Footer": {
-    "tag": "Wasiliana nasi.",
-    "title": "Fuata safari yetu",
-    "description": "Clap inajenga miundombinu ya kisasa ya kifedha kwa Afrika — kufanya uhamishaji wa pesa kuvuka mipaka kuwa wa haraka, rahisi na wazi zaidi.",
-    "navigation": "Urambazaji",
+    "tag": "Inaanzia WhatsApp. Ya kimataifa kwa muundo.",
+    "title": "Malipo ya kimataifa, yaliyojengwa kuanzia WhatsApp.",
+    "description": "Clap ni jukwaa la kifedha linaloanzia WhatsApp linalosaidia watu binafsi na biashara kupokea malipo ya kimataifa, kusimamia sarafu mbalimbali, kubadilisha fedha, na kuhamisha pesa nje ya mipaka kwa urahisi.",
+    "navigation": "Uabiri",
     "company": "Kampuni",
-    "socials": "Mitandao ya kijamii",
+    "socials": "Mitandao ya Kijamii",
     "copyright": "© 2026 Clap. Haki zote zimehifadhiwa.",
-    "built": "Imejengwa kwa Afrika, imeundwa kwa dunia.",
+    "built": "Imejengwa kuanzia WhatsApp. Imeundwa kwa ajili ya ulimwengu.",
     "links": {
-      "community": "Jamii",
-      "convert": "Badilisha",
-      "contact": "Wasiliana",
+      "community": "Biashara",
+      "convert": "Watu Binafsi",
+      "contact": "Wasiliana Nasi",
       "privacy": "Sera ya Faragha",
       "terms": "Masharti ya Huduma"
     },
     "disclaimer": {
-      "paragraph1": "Clap Finance ni kampuni ya teknolojia ya kifedha, si benki. Huduma za kifedha hutolewa na washirika wa benki na kifedha wenye leseni katika maeneo ambayo Clap inafanya kazi.",
-
-      "paragraph2": "Clap hutoa teknolojia na miundombinu inayowawezesha watumiaji kutuma, kupokea, kubadilisha na kusimamia pesa kidijitali. Huduma za benki, malipo, kadi na uhamishaji wa fedha zinaweza kutolewa kupitia washirika wengine waliodhibitiwa kisheria.",
-
-      "paragraph3": "Fedha zinazohifadhiwa kupitia taasisi za kifedha washirika zinaweza kuwa chini ya ulinzi na vikwazo vinavyotumika katika taasisi hizo na sheria za maeneo husika.",
-
-      "paragraph4": "Baadhi ya huduma huenda zisipatikane katika maeneo yote na zinaweza kuwa chini ya masharti ya kustahiki, viwango vya miamala na idhini za kisheria.",
-
-      "paragraph5": "Alama zote za biashara, nembo na majina ya chapa ni mali ya wamiliki wao husika."
+      "paragraph1": "Clap ni kampuni ya teknolojia ya kifedha na si benki. Huduma za kibenki na malipo hutolewa kupitia washirika wa taasisi za kifedha zenye leseni.",
+      "paragraph2": "Clap hutoa teknolojia inayowawezesha watumiaji kupokea malipo ya kimataifa, kuhifadhi na kubadilisha sarafu mbalimbali, na kutuma pesa kupitia mitandao ya malipo inayotumika.",
+      "paragraph3": "Utoaji wa akaunti, uchakataji wa malipo, malipo ya mwisho, ubadilishaji wa fedha za kigeni, na huduma nyingine za kifedha zinazohusiana hutolewa na taasisi za kifedha na washirika wa malipo wa nje wenye udhibiti.",
+      "paragraph4": "Bidhaa na huduma zinaweza kutofautiana kulingana na nchi na zinategemea masharti ya ustahiki, idhini za kiudhibiti, ukaguzi wa uzingatiaji, na mipaka ya miamala.",
+      "paragraph5": "Alama zote za biashara, nembo, na majina ya chapa ni mali ya wamiliki wao husika."
     }
   }
 }
