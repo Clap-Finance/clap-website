@@ -65,12 +65,13 @@
           animation: $animation-reveal-up;
 
           @media screen and (max-width: $md) {
-            letter-spacing: -0.08rem;
+            letter-spacing: -0.1rem;
           }
         }
 
         p {
           max-width: $xs;
+          color: $color-gray-300;
         }
       }
     }
