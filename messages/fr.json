@@ -13,21 +13,21 @@
 
   "HomePage": {
     "heroSection": {
-      "title": "Paiements internationaux. Directement sur WhatsApp.",
-      "description": "Recevez des paiements, détenez plusieurs devises, échangez des fonds et envoyez de l'argent dans le monde entier—sans jamais quitter WhatsApp.",
+      "title": "Paiements mondiaux. Directement sur WhatsApp.",
+      "description": "Recevez des paiements, détenez plusieurs devises, échangez des fonds et envoyez de l'argent partout dans le monde—sans jamais quitter WhatsApp.",
       "cta": "Rejoindre la liste d'attente"
     },
 
     "conversionSection": {
       "title": "La finance mondiale, sur WhatsApp.",
-      "description": "Que vous soyez freelance, travailleur à distance, chef d'entreprise, ou que vous souteniez votre famille à l'étranger, Clap facilite la réception, la conservation, la conversion et l'envoi d'argent à travers les frontières via WhatsApp—avec une application mobile dédiée bientôt disponible.",
+      "description": "Que vous soyez freelance, travailleur à distance, chef d'entreprise ou que vous souteniez votre famille à l'étranger, Clap facilite la réception, la détention, la conversion et l'envoi d'argent à l'international via WhatsApp—avec une application mobile dédiée à venir.",
       "cta": "Obtenir un accès anticipé"
     }
   },
 
   "WaitListFormSection": {
     "title": "Rejoindre la liste d'attente",
-    "description": "Soyez parmi les premiers à découvrir la finance mondiale sur WhatsApp avec des comptes internationaux, des soldes multi-devises et des paiements transfrontaliers simplifiés.",
+    "description": "Soyez parmi les premiers à découvrir la finance mondiale sur WhatsApp avec des comptes internationaux, des soldes multidevises et des paiements transfrontaliers fluides.",
     "cta": "Rejoindre la liste d'attente",
     "inputFields": {
       "fullName": {
@@ -36,7 +36,7 @@
       },
       "email": {
         "label": "E-mail",
-        "error": "Veuillez entrer une adresse e-mail valide"
+        "error": "Veuillez saisir une adresse e-mail valide"
       }
     }
   },
@@ -45,7 +45,7 @@
     "waitlist": {
       "title": "Vous êtes sur la",
       "title_highlight": "liste d'attente !",
-      "description": "Merci d'avoir rejoint la liste d'attente de Clap. Nous vous informerons dès que l'accès anticipé sera disponible."
+      "description": "Merci de rejoindre la liste d'attente de Clap. Nous vous informerons dès que l'accès anticipé sera disponible."
     }
   },
 
@@ -59,13 +59,13 @@
 
   "Footer": {
     "tag": "WhatsApp. Mondial par conception.",
-    "title": "Paiements internationaux, sur WhatsApp.",
-    "description": "Clap est une plateforme financière sur WhatsApp qui aide les particuliers et les entreprises à recevoir des paiements internationaux, gérer plusieurs devises, échanger des fonds et transférer de l'argent à travers les frontières en toute simplicité.",
+    "title": "Paiements mondiaux, conçus sur WhatsApp.",
+    "description": "Clap est une plateforme financière WhatsApp qui aide les particuliers et les entreprises à recevoir des paiements internationaux, gérer plusieurs devises, échanger des fonds et transférer de l'argent à l'international en toute simplicité.",
     "navigation": "Navigation",
     "company": "Entreprise",
     "socials": "Réseaux sociaux",
     "copyright": "© 2026 Clap. Tous droits réservés.",
-    "built": "Construit sur WhatsApp. Conçu pour le monde.",
+    "built": "Conçu sur WhatsApp. Pensé pour le monde entier.",
     "links": {
       "community": "Entreprises",
       "convert": "Particuliers",
@@ -74,11 +74,39 @@
       "terms": "Conditions d'utilisation"
     },
     "disclaimer": {
-      "paragraph1": "Clap est une entreprise de technologie financière et non une banque. Les services bancaires et de paiement sont fournis par l'intermédiaire de partenaires institutionnels financiers agréés.",
-      "paragraph2": "Clap fournit une technologie qui permet aux utilisateurs de recevoir des paiements internationaux, de détenir et d'échanger plusieurs devises, et d'envoyer de l'argent via les réseaux de paiement pris en charge.",
-      "paragraph3": "L'émission de comptes, le traitement des paiements, les règlements, les opérations de change et les services financiers connexes sont fournis par des institutions financières et des partenaires de paiement tiers réglementés.",
-      "paragraph4": "Les produits et services peuvent varier selon le pays et sont soumis à des conditions d'éligibilité, à des approbations réglementaires, à des contrôles de conformité et à des limites de transaction.",
-      "paragraph5": "Toutes les marques, tous les logos et noms de marque sont la propriété de leurs détenteurs respectifs."
+      "paragraph1": "Clap est une société de technologie financière et non une banque. Les services bancaires et de paiement sont fournis par l'intermédiaire de partenaires financiers agréés.",
+      "paragraph2": "Clap fournit une technologie permettant aux utilisateurs de recevoir des paiements internationaux, de détenir et d'échanger plusieurs devises, et d'envoyer de l'argent via les réseaux de paiement pris en charge.",
+      "paragraph3": "L'émission de comptes, le traitement des paiements, les règlements, le change et les services financiers connexes sont assurés par des institutions financières et des partenaires de paiement tiers réglementés.",
+      "paragraph4": "Les produits et services peuvent varier selon les pays et sont soumis à des conditions d'éligibilité, des approbations réglementaires, des contrôles de conformité et des limites de transaction.",
+      "paragraph5": "Toutes les marques, logos et noms de marque sont la propriété de leurs détenteurs respectifs."
+    }
+  },
+
+  "FAQ": {
+    "tag": "Des questions ?",
+    "title": "Questions fréquentes",
+    "description": "Tout ce que vous devez savoir sur la réception, la détention et l'envoi d'argent avec Clap sur WhatsApp.",
+    "items": {
+      "q1": {
+        "question": "Qu'est-ce que Clap ?",
+        "answer": "Clap est une plateforme financière basée sur WhatsApp qui permet aux particuliers et aux entreprises de recevoir des paiements internationaux, de détenir plusieurs devises, d'échanger des fonds et d'envoyer de l'argent à l'international—sans jamais quitter WhatsApp."
+      },
+      "q2": {
+        "question": "Dois-je télécharger une application distincte ?",
+        "answer": "Non. Clap fonctionne entièrement dans WhatsApp, il n'y a donc rien à télécharger pour commencer. Une application mobile dédiée arrivera également bientôt pour les utilisateurs qui le souhaitent."
+      },
+      "q3": {
+        "question": "Quelles devises puis-je détenir et échanger ?",
+        "answer": "Clap vous permet de détenir plusieurs devises au même endroit et de les convertir à des taux compétitifs, afin de recevoir et d'envoyer des fonds à l'international sans jongler entre plusieurs comptes."
+      },
+      "q4": {
+        "question": "Clap est-elle une banque ?",
+        "answer": "Non. Clap est une société de technologie financière, et non une banque. Les services bancaires, de traitement des paiements et de change sont assurés par des institutions financières tierces agréées et réglementées."
+      },
+      "q5": {
+        "question": "Quand pourrai-je commencer à utiliser Clap ?",
+        "answer": "Clap est actuellement en accès anticipé. Rejoignez la liste d'attente et nous vous informerons dès que votre compte sera prêt à être activé."
+      }
     }
   }
 }

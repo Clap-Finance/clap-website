@@ -80,5 +80,33 @@
       "paragraph4": "Products and services may vary by country and are subject to eligibility requirements, regulatory approvals, compliance checks, and transaction limits.",
       "paragraph5": "All trademarks, logos, and brand names are the property of their respective owners."
     }
+  },
+
+  "FAQ": {
+    "tag": "Got questions?",
+    "title": "Frequently asked questions",
+    "description": "Everything you need to know about receiving, holding, and sending money with Clap on WhatsApp.",
+    "items": {
+      "q1": {
+        "question": "What is Clap?",
+        "answer": "Clap is a WhatsApp-based financial platform that lets individuals and businesses receive international payments, hold multiple currencies, exchange funds, and send money across borders—all without leaving WhatsApp."
+      },
+      "q2": {
+        "question": "Do I need to download a separate app?",
+        "answer": "No. Clap runs entirely within WhatsApp, so there's nothing extra to download to get started. A dedicated mobile app is also coming soon for users who want it."
+      },
+      "q3": {
+        "question": "Which currencies can I hold and exchange?",
+        "answer": "Clap lets you hold multiple currencies in one place and convert between them at competitive rates, so you can receive and send funds internationally without juggling separate accounts."
+      },
+      "q4": {
+        "question": "Is Clap a bank?",
+        "answer": "No. Clap is a financial technology company, not a bank. Banking, payment processing, and foreign exchange services are provided through licensed, regulated third-party financial institution partners."
+      },
+      "q5": {
+        "question": "When can I start using Clap?",
+        "answer": "Clap is currently in early access. Join the waitlist and we'll notify you as soon as your account is ready to activate."
+      }
+    }
   }
 }
