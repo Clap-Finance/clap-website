@@ -4,38 +4,43 @@
     "convert": "Particuliers",
     "contact": "Contact"
   },
+
   "Translation": {
     "english": "English",
     "french": "Français",
     "swahili": "Kiswahili"
   },
+
   "HomePage": {
     "heroSection": {
-      "title": "La plateforme de paiements internationaux pensée pour WhatsApp.",
-      "description": "Recevez des paiements internationaux, détenez plusieurs devises, échangez des fonds et envoyez de l'argent à l'international grâce à une expérience conçue avant tout pour WhatsApp, destinée aux particuliers et aux entreprises.",
+      "title": "Paiements internationaux. Directement sur WhatsApp.",
+      "description": "Recevez des paiements, détenez plusieurs devises, échangez des fonds et envoyez de l'argent dans le monde entier—sans jamais quitter WhatsApp.",
       "cta": "Rejoindre la liste d'attente"
     },
+
     "conversionSection": {
-      "title": "La finance mondiale, pensée pour WhatsApp.",
-      "description": "Que vous soyez freelance, travailleur à distance, chef d'entreprise ou que vous souteniez votre famille à l'étranger, Clap facilite la réception, la détention, la conversion et l'envoi d'argent à l'international grâce à une expérience WhatsApp-first — avec une application mobile dédiée bientôt disponible.",
+      "title": "La finance mondiale, sur WhatsApp.",
+      "description": "Que vous soyez freelance, travailleur à distance, chef d'entreprise, ou que vous souteniez votre famille à l'étranger, Clap facilite la réception, la conservation, la conversion et l'envoi d'argent à travers les frontières via WhatsApp—avec une application mobile dédiée bientôt disponible.",
       "cta": "Obtenir un accès anticipé"
     }
   },
+
   "WaitListFormSection": {
     "title": "Rejoindre la liste d'attente",
-    "description": "Soyez parmi les premiers à découvrir la finance mondiale pensée pour WhatsApp, avec des comptes internationaux, des soldes multidevises et des paiements transfrontaliers sans effort.",
+    "description": "Soyez parmi les premiers à découvrir la finance mondiale sur WhatsApp avec des comptes internationaux, des soldes multi-devises et des paiements transfrontaliers simplifiés.",
     "cta": "Rejoindre la liste d'attente",
-    "inputFeilds": {
+    "inputFields": {
       "fullName": {
         "label": "Nom complet",
         "error": "Le nom complet est requis"
       },
       "email": {
         "label": "E-mail",
-        "error": "Saisissez une adresse e-mail valide"
+        "error": "Veuillez entrer une adresse e-mail valide"
       }
     }
   },
+
   "Modal": {
     "waitlist": {
       "title": "Vous êtes sur la",
@@ -43,6 +48,7 @@
       "description": "Merci d'avoir rejoint la liste d'attente de Clap. Nous vous informerons dès que l'accès anticipé sera disponible."
     }
   },
+
   "CookieBanner": {
     "label": "Consentement aux cookies",
     "message": "Nous utilisons des cookies pour améliorer votre expérience et analyser l'utilisation du site.",
@@ -50,15 +56,16 @@
     "accept": "Accepter",
     "decline": "Refuser"
   },
+
   "Footer": {
-    "tag": "Pensé pour WhatsApp. Mondial par nature.",
-    "title": "Des paiements internationaux, pensés pour WhatsApp.",
-    "description": "Clap est une plateforme financière conçue avant tout pour WhatsApp, qui aide particuliers et entreprises à recevoir des paiements internationaux, gérer plusieurs devises, échanger des fonds et transférer de l'argent à l'international en toute simplicité.",
+    "tag": "WhatsApp. Mondial par conception.",
+    "title": "Paiements internationaux, sur WhatsApp.",
+    "description": "Clap est une plateforme financière sur WhatsApp qui aide les particuliers et les entreprises à recevoir des paiements internationaux, gérer plusieurs devises, échanger des fonds et transférer de l'argent à travers les frontières en toute simplicité.",
     "navigation": "Navigation",
     "company": "Entreprise",
     "socials": "Réseaux sociaux",
     "copyright": "© 2026 Clap. Tous droits réservés.",
-    "built": "Pensé pour WhatsApp. Conçu pour le monde.",
+    "built": "Construit sur WhatsApp. Conçu pour le monde.",
     "links": {
       "community": "Entreprises",
       "convert": "Particuliers",
@@ -67,11 +74,11 @@
       "terms": "Conditions d'utilisation"
     },
     "disclaimer": {
-      "paragraph1": "Clap est une entreprise de technologie financière et non une banque. Les services bancaires et de paiement sont fournis par des institutions financières partenaires agréées.",
-      "paragraph2": "Clap fournit une technologie permettant aux utilisateurs de recevoir des paiements internationaux, de détenir et d'échanger plusieurs devises, et d'envoyer de l'argent via les réseaux de paiement pris en charge.",
-      "paragraph3": "L'émission de comptes, le traitement des paiements, les règlements, le change et les services financiers connexes sont fournis par des institutions financières et partenaires de paiement tiers réglementés.",
-      "paragraph4": "Les produits et services peuvent varier selon les pays et sont soumis à des conditions d'éligibilité, à des approbations réglementaires, à des contrôles de conformité et à des limites de transaction.",
-      "paragraph5": "Toutes les marques déposées, logos et noms de marque sont la propriété de leurs détenteurs respectifs."
+      "paragraph1": "Clap est une entreprise de technologie financière et non une banque. Les services bancaires et de paiement sont fournis par l'intermédiaire de partenaires institutionnels financiers agréés.",
+      "paragraph2": "Clap fournit une technologie qui permet aux utilisateurs de recevoir des paiements internationaux, de détenir et d'échanger plusieurs devises, et d'envoyer de l'argent via les réseaux de paiement pris en charge.",
+      "paragraph3": "L'émission de comptes, le traitement des paiements, les règlements, les opérations de change et les services financiers connexes sont fournis par des institutions financières et des partenaires de paiement tiers réglementés.",
+      "paragraph4": "Les produits et services peuvent varier selon le pays et sont soumis à des conditions d'éligibilité, à des approbations réglementaires, à des contrôles de conformité et à des limites de transaction.",
+      "paragraph5": "Toutes les marques, tous les logos et noms de marque sont la propriété de leurs détenteurs respectifs."
     }
   }
 }

@@ -13,23 +13,23 @@
 
   "HomePage": {
     "heroSection": {
-      "title": "The WhatsApp-first platform for global payments.",
-      "description": "Receive international payments, hold multiple currencies, exchange funds, and send money across borders through a WhatsApp-first experience designed for individuals and businesses.",
+      "title": "Global payments. Right on WhatsApp.",
+      "description": "Receive payments, hold multiple currencies, exchange funds, and send money worldwide—all without leaving WhatsApp.",
       "cta": "Join the waitlist"
     },
 
     "conversionSection": {
-      "title": "Global finance, built WhatsApp-first.",
-      "description": "Whether you're a freelancer, remote worker, business owner, or supporting family abroad, Clap makes receiving, holding, converting, and sending money across borders effortless through a WhatsApp-first experience—with a dedicated mobile app coming soon.",
+      "title": "Global finance, built on WhatsApp.",
+      "description": "Whether you're a freelancer, remote worker, business owner, or supporting family abroad, Clap makes receiving, holding, converting, and sending money across borders effortless through WhatsApp—with a dedicated mobile app coming soon.",
       "cta": "Get early access"
     }
   },
 
   "WaitListFormSection": {
-    "title": "Join the waitlist",
-    "description": "Be among the first to experience WhatsApp-first global finance with international accounts, multi-currency balances, and seamless cross-border payments.",
+    "title": "Join the Waitlist",
+    "description": "Be among the first to experience WhatsApp global finance with international accounts, multi-currency balances, and seamless cross-border payments.",
     "cta": "Join the waitlist",
-    "inputFeilds": {
+    "inputFields": {
       "fullName": {
         "label": "Full Name",
         "error": "Full Name is required"
@@ -58,14 +58,14 @@
   },
 
   "Footer": {
-    "tag": "WhatsApp-first. Global by design.",
-    "title": "Global payments, built WhatsApp-first.",
-    "description": "Clap is a WhatsApp-first financial platform that helps individuals and businesses receive international payments, manage multiple currencies, exchange funds, and move money across borders with ease.",
+    "tag": "WhatsApp. Global by design.",
+    "title": "Global payments, built on WhatsApp.",
+    "description": "Clap is a WhatsApp financial platform that helps individuals and businesses receive international payments, manage multiple currencies, exchange funds, and move money across borders with ease.",
     "navigation": "Navigation",
     "company": "Company",
     "socials": "Socials",
     "copyright": "© 2026 Clap. All rights reserved.",
-    "built": "Built WhatsApp-first. Designed for the world.",
+    "built": "Built on WhatsApp. Designed for the world.",
     "links": {
       "community": "Businesses",
       "convert": "Individuals",

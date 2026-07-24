@@ -112,18 +112,18 @@ const WaitlistForm = () => {
       </header>
 
       <CustomInput
-        label={t("inputFeilds.fullName.label")}
+        label={t("inputFields.fullName.label")}
         placeholder="Adesua Kwame"
         type="text"
         fullWidth
         error={errors.full_name?.message}
         {...register("full_name", {
-          required: `${t("inputFeilds.fullName.error")}`,
+          required: `${t("inputFields.fullName.error")}`,
         })}
       />
 
       <CustomInput
-        label={t("inputFeilds.email.label")}
+        label={t("inputFields.email.label")}
         placeholder="you@example.com"
         type="email"
         fullWidth
@@ -132,7 +132,7 @@ const WaitlistForm = () => {
           required: "Email is required",
           pattern: {
             value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-            message: `${t("inputFeilds.email.error")}`,
+            message: `${t("inputFields.email.error")}`,
           },
         })}
       />
