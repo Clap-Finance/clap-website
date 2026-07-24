@@ -48,7 +48,7 @@ const Nav = () => {
           <div className={style.nav__cta}>
             <LanguagePopover />
 
-            <Button className={style.nav__ctaButton}  popoverTarget="join_waitlist">
+            <Button variant="dark" className={style.nav__ctaButton}  popoverTarget="join_waitlist">
               {hero("heroSection.cta")}
             </Button>
 

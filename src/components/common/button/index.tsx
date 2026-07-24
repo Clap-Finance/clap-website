@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Button.module.scss";
 import { TbLoader } from "react-icons/tb";
 
-type ButtonVariant = "primary" | "secondary" | "ghost" | "danger";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "danger" | "dark";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
