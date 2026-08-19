@@ -148,10 +148,10 @@
     &::after {
       content: "";
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 70%;
+      left: 70%;
 
-      background: rgba($color-gray-500, 0.9);
+      background: rgba($color-gray-300, 0.9);
       transform: translate(-50%, -50%);
     }
 

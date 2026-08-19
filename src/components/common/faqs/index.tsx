@@ -2,6 +2,7 @@
 
 import style from "./FAQ.module.scss";
 import { useTranslations } from "next-intl";
+import { TbCancel, TbChevronDown } from "react-icons/tb";
 
 const FAQSection = () => {
   const t = useTranslations("FAQ");
@@ -37,7 +38,7 @@ const FAQSection = () => {
                   {t(`items.${item.id}.question`)}
                 </span>
 
-                <span className={style.faq__icon} aria-hidden="true" />
+                <TbChevronDown className={style.faq__icon} aria-hidden="true" />
               </summary>
 
               <div className={style.faq__answer}>
