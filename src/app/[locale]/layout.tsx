@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -8,9 +8,9 @@ import Footer from "@/components/common/footer";
 import CookieBanner from "@/components/common/cookie-banner";
 import Script from "next/script";
 
-const interSans = Inter({
-  variable: "--font-inter-sans",
-  subsets: ["latin"],
+const uncutSans = localFont({
+  src: "../fonts/UncutSans-Variable.woff2",
+  variable: "--font-uncut-sans",
   display: "swap",
 });
 
@@ -98,7 +98,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${interSans.variable} h-full antialiased`}>
+    <html lang={locale} className={`${uncutSans.variable} h-full antialiased`}>
       <head>
         <script
           type="application/ld+json"
