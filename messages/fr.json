@@ -1,3 +1,4 @@
+
 {
   "Navigation": {
     "community": "Entreprises",
@@ -13,29 +14,29 @@
 
   "HomePage": {
     "heroSection": {
-      "title": "Paiements mondiaux. Directement sur WhatsApp.",
-      "description": "Recevez des paiements, détenez plusieurs devises, échangez des fonds et envoyez de l'argent partout dans le monde—sans jamais quitter WhatsApp.",
+      "title": "Échangez des devises. Envoyez de l'argent au-delà des frontières.",
+      "description": "Convertissez le naira en franc CFA et envoyez de l'argent entre le Nigeria et le Bénin rapidement et facilement.",
       "cta": "Rejoindre la liste d'attente"
     },
 
     "conversionSection": {
-      "title": "La finance mondiale, sur WhatsApp.",
-      "description": "Que vous soyez freelance, travailleur à distance, chef d'entreprise ou que vous souteniez votre famille à l'étranger, Clap facilite la réception, la détention, la conversion et l'envoi d'argent à l'international via WhatsApp—avec une application mobile dédiée à venir.",
-      "cta": "Obtenir un accès anticipé"
+      "title": "Une plateforme. Deux devises. Des possibilités infinies.",
+      "description": "Que vous soyez commerçant, chef d'entreprise, étudiant, freelance ou que vous souteniez votre famille à l'étranger, Clap facilite les échanges entre le naira et le franc CFA, ainsi que les transferts et la réception de paiements entre le Nigeria et le Bénin.",
+      "cta": "Accéder en avant-première"
     }
   },
 
   "WaitListFormSection": {
-    "title": "Rejoindre la liste d'attente",
-    "description": "Soyez parmi les premiers à découvrir la finance mondiale sur WhatsApp avec des comptes internationaux, des soldes multidevises et des paiements transfrontaliers fluides.",
+    "title": "Soyez parmi les premiers à découvrir une nouvelle façon d'envoyer de l'argent",
+    "description": "Accédez en avant-première à des paiements transfrontaliers simplifiés. Échangez des nairas et des francs CFA, envoyez de l'argent au-delà des frontières et profitez d'une expérience plus rapide et plus transparente.",
     "cta": "Rejoindre la liste d'attente",
     "inputFields": {
       "fullName": {
         "label": "Nom complet",
-        "error": "Le nom complet est requis"
+        "error": "Le nom complet est obligatoire"
       },
       "email": {
-        "label": "E-mail",
+        "label": "Adresse e-mail",
         "error": "Veuillez saisir une adresse e-mail valide"
       }
     }
@@ -45,27 +46,27 @@
     "waitlist": {
       "title": "Vous êtes sur la",
       "title_highlight": "liste d'attente !",
-      "description": "Merci de rejoindre la liste d'attente de Clap. Nous vous informerons dès que l'accès anticipé sera disponible."
+      "description": "Merci de vous être inscrit sur la liste d'attente de Clap. Nous vous informerons dès que l'accès anticipé sera disponible."
     }
   },
 
   "CookieBanner": {
     "label": "Consentement aux cookies",
-    "message": "Nous utilisons des cookies pour améliorer votre expérience et analyser l'utilisation du site.",
+    "message": "Nous utilisons des cookies pour améliorer votre expérience et comprendre comment les visiteurs utilisent notre site.",
     "learnMore": "En savoir plus",
     "accept": "Accepter",
     "decline": "Refuser"
   },
 
   "Footer": {
-    "tag": "WhatsApp. Mondial par conception.",
-    "title": "Paiements mondiaux, conçus sur WhatsApp.",
-    "description": "Clap est une plateforme financière WhatsApp qui aide les particuliers et les entreprises à recevoir des paiements internationaux, gérer plusieurs devises, échanger des fonds et transférer de l'argent à l'international en toute simplicité.",
+    "tag": "Votre argent. Sans frontières.",
+    "title": "Simplifier les paiements transfrontaliers.",
+    "description": "Clap est une plateforme de technologie financière qui facilite les échanges de devises et les transferts d'argent entre les pays africains pour les particuliers et les entreprises. Notre première connexion relie le Nigeria et le Bénin.",
     "navigation": "Navigation",
     "company": "Entreprise",
     "socials": "Réseaux sociaux",
     "copyright": "© 2026 Clap. Tous droits réservés.",
-    "built": "Conçu sur WhatsApp. Pensé pour le monde entier.",
+    "built": "Conçu pour l'Afrique. Connecté au-delà des frontières.",
     "links": {
       "community": "Entreprises",
       "convert": "Particuliers",
@@ -74,38 +75,42 @@
       "terms": "Conditions d'utilisation"
     },
     "disclaimer": {
-      "paragraph1": "Clap est une société de technologie financière et non une banque. Les services bancaires et de paiement sont fournis par l'intermédiaire de partenaires financiers agréés.",
-      "paragraph2": "Clap fournit une technologie permettant aux utilisateurs de recevoir des paiements internationaux, de détenir et d'échanger plusieurs devises, et d'envoyer de l'argent via les réseaux de paiement pris en charge.",
-      "paragraph3": "L'émission de comptes, le traitement des paiements, les règlements, le change et les services financiers connexes sont assurés par des institutions financières et des partenaires de paiement tiers réglementés.",
-      "paragraph4": "Les produits et services peuvent varier selon les pays et sont soumis à des conditions d'éligibilité, des approbations réglementaires, des contrôles de conformité et des limites de transaction.",
-      "paragraph5": "Toutes les marques, logos et noms de marque sont la propriété de leurs détenteurs respectifs."
+      "paragraph1": "Clap est une entreprise de technologie financière et n'est pas une banque. Les services bancaires, de traitement des paiements et autres services financiers réglementés sont fournis par l'intermédiaire de partenaires financiers agréés.",
+      "paragraph2": "Clap fournit une technologie permettant aux utilisateurs d'échanger des devises prises en charge, d'effectuer des transferts transfrontaliers et de réaliser des paiements via les réseaux financiers compatibles.",
+      "paragraph3": "Les services de change, de traitement des paiements, de règlement et de versement sont assurés par des institutions financières et des partenaires de paiement tiers.",
+      "paragraph4": "Les produits et services peuvent varier selon les pays et sont soumis à des critères d'éligibilité, aux autorisations réglementaires, aux vérifications d'identité, aux contrôles de conformité et aux limites de transaction.",
+      "paragraph5": "Toutes les marques, tous les logos et tous les noms commerciaux appartiennent à leurs propriétaires respectifs."
     }
   },
 
   "FAQ": {
     "tag": "Des questions ?",
-    "title": "Questions fréquentes",
-    "description": "Tout ce que vous devez savoir sur la réception, la détention et l'envoi d'argent avec Clap sur WhatsApp.",
+    "title": "Questions fréquemment posées",
+    "description": "Découvrez comment Clap simplifie les échanges de devises et les transferts d'argent au-delà des frontières africaines.",
     "items": {
       "q1": {
         "question": "Qu'est-ce que Clap ?",
-        "answer": "Clap est une plateforme financière basée sur WhatsApp qui permet aux particuliers et aux entreprises de recevoir des paiements internationaux, de détenir plusieurs devises, d'échanger des fonds et d'envoyer de l'argent à l'international—sans jamais quitter WhatsApp."
+        "answer": "Clap est une plateforme de paiements transfrontaliers qui facilite les échanges de devises et les transferts d'argent pour les particuliers et les entreprises. Nous commençons par connecter le Nigeria et le Bénin afin de simplifier et de faciliter les transactions entre le naira et le franc CFA."
       },
       "q2": {
-        "question": "Dois-je télécharger une application distincte ?",
-        "answer": "Non. Clap fonctionne entièrement dans WhatsApp, il n'y a donc rien à télécharger pour commencer. Une application mobile dédiée arrivera également bientôt pour les utilisateurs qui le souhaitent."
+        "question": "Quelles devises Clap prend-il en charge ?",
+        "answer": "Clap commence avec le naira nigérian (NGN) et le franc CFA d'Afrique de l'Ouest (XOF). Les utilisateurs pourront échanger ces devises et envoyer de l'argent via les réseaux de paiement pris en charge."
       },
       "q3": {
-        "question": "Quelles devises puis-je détenir et échanger ?",
-        "answer": "Clap vous permet de détenir plusieurs devises au même endroit et de les convertir à des taux compétitifs, afin de recevoir et d'envoyer des fonds à l'international sans jongler entre plusieurs comptes."
+        "question": "Comment fonctionnent les transferts transfrontaliers ?",
+        "answer": "Saisissez simplement le montant que vous souhaitez échanger, consultez le taux de change proposé et le montant que votre destinataire recevra, renseignez ses coordonnées de paiement, puis confirmez la transaction. Les versements sont effectués via les réseaux bancaires et de monnaie mobile pris en charge."
       },
       "q4": {
-        "question": "Clap est-elle une banque ?",
-        "answer": "Non. Clap est une société de technologie financière, et non une banque. Les services bancaires, de traitement des paiements et de change sont assurés par des institutions financières tierces agréées et réglementées."
+        "question": "Y a-t-il des frais cachés ?",
+        "answer": "Clap repose sur une tarification transparente. Avant de confirmer une transaction, vous pourrez consulter le taux de change applicable, les frais éventuels et le montant final que recevra votre destinataire."
       },
       "q5": {
-        "question": "Quand pourrai-je commencer à utiliser Clap ?",
-        "answer": "Clap est actuellement en accès anticipé. Rejoignez la liste d'attente et nous vous informerons dès que votre compte sera prêt à être activé."
+        "question": "Clap est-il une banque ?",
+        "answer": "Non. Clap est une entreprise de technologie financière, pas une banque. Les services financiers réglementés, notamment le traitement et le règlement des paiements, sont assurés par des institutions financières tierces agréées."
+      },
+      "q6": {
+        "question": "Quand pourrai-je utiliser Clap ?",
+        "answer": "Clap prépare actuellement son lancement en accès anticipé. Inscrivez-vous sur notre liste d'attente et nous vous informerons dès que la plateforme sera disponible."
       }
     }
   }

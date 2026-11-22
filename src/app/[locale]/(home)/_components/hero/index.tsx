@@ -5,8 +5,7 @@ import Button from "@/components/common/button";
 import Modal from "@/components/common/modal";
 import WaitlistForm from "@/app/[locale]/(home)/_components/form/Waitlist";
 import SuccessModal from "@/components/common/modal/successModal";
-import Image from "next/image";
-import heroImage from "@/assets/brand/hands.png";
+import PhoneHomeScreen from "../props/phoneMU";
 
 const HeroSection = () => {
   const t = useTranslations("HomePage");
@@ -28,13 +27,7 @@ const HeroSection = () => {
 
               <div className={styles.hero_content_right}>
                 <div className={styles.hero_image_wrapper}>
-                  <Image
-                    src={heroImage}
-                    alt="Clap mobile money transfer"
-                    priority
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className={styles.hero_image}
-                  />
+                <PhoneHomeScreen />
                 </div>
               </div>
             </div>

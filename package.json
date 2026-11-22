@@ -13,6 +13,7 @@
     "@tanstack/react-query": "^5.100.9",
     "iconsax-reactjs": "^0.0.8",
     "mongodb": "^7.2.0",
+    "motion": "^14.14.0",
     "next": "16.2.4",
     "next-intl": "^4.11.0",
     "nodemailer": "^8.0.7",

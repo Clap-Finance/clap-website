@@ -14,6 +14,12 @@ const uncutSans = localFont({
   display: "swap",
 });
 
+const pacifico = localFont({
+  src: "../fonts/Pacifico-Regular.ttf",
+  variable: "--font-pacifico",
+  display: "swap",
+});
+
 const siteUrl = "https://clapmoney.com";
 
 export const viewport: Viewport = {
@@ -98,7 +104,10 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${uncutSans.variable} h-full antialiased`}>
+<html
+  lang={locale}
+  className={`${uncutSans.variable} ${pacifico.variable} h-full antialiased`}
+>
       <head>
         <script
           type="application/ld+json"

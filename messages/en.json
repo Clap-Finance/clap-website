@@ -1,3 +1,4 @@
+
 {
   "Navigation": {
     "community": "Businesses",
@@ -13,21 +14,21 @@
 
   "HomePage": {
     "heroSection": {
-      "title": "Global payments. Right on WhatsApp.",
-      "description": "Receive payments, hold multiple currencies, exchange funds, and send money worldwide—all without leaving WhatsApp.",
-      "cta": "Join the waitlist"
-    },
+  "title": "Exchange currencies. Send money across borders.",
+  "description": "Convert Naira to CFA and send money between Nigeria and Benin Republic quickly and easily.",
+  "cta": "Join the waitlist"
+},
 
     "conversionSection": {
-      "title": "Global finance, built on WhatsApp.",
-      "description": "Whether you're a freelancer, remote worker, business owner, or supporting family abroad, Clap makes receiving, holding, converting, and sending money across borders effortless through WhatsApp—with a dedicated mobile app coming soon.",
+      "title": "One platform. Two currencies. Endless possibilities.",
+      "description": "Whether you're a trader, business owner, student, freelancer, or supporting family across the border, Clap makes it easier to exchange Naira and CFA, send money, and receive payments between Nigeria and Benin Republic.",
       "cta": "Get early access"
     }
   },
 
   "WaitListFormSection": {
-    "title": "Join the Waitlist",
-    "description": "Be among the first to experience WhatsApp global finance with international accounts, multi-currency balances, and seamless cross-border payments.",
+    "title": "Be First to Move Money Differently",
+    "description": "Get early access to simpler cross-border payments. Exchange Naira and CFA, send money across borders, and enjoy a faster, more transparent way to move your money.",
     "cta": "Join the waitlist",
     "inputFields": {
       "fullName": {
@@ -35,7 +36,7 @@
         "error": "Full Name is required"
       },
       "email": {
-        "label": "Email",
+        "label": "Email Address",
         "error": "Enter a valid email address"
       }
     }
@@ -45,27 +46,27 @@
     "waitlist": {
       "title": "You're on the",
       "title_highlight": "waitlist!",
-      "description": "Thanks for joining the Clap waitlist. We'll let you know as soon as early access becomes available."
+      "description": "Thanks for joining the Clap waitlist. We'll notify you when early access becomes available."
     }
   },
 
   "CookieBanner": {
     "label": "Cookie consent",
-    "message": "We use cookies to improve your experience and analyze site usage.",
+    "message": "We use cookies to improve your experience and understand how visitors use our website.",
     "learnMore": "Learn more",
     "accept": "Accept",
     "decline": "Decline"
   },
 
   "Footer": {
-    "tag": "WhatsApp. Global by design.",
-    "title": "Global payments, built on WhatsApp.",
-    "description": "Clap is a WhatsApp financial platform that helps individuals and businesses receive international payments, manage multiple currencies, exchange funds, and move money across borders with ease.",
+    "tag": "Your money. Without borders.",
+    "title": "Making cross-border payments simpler.",
+    "description": "Clap is a cross-border financial technology platform making it easier for individuals and businesses to exchange currencies and move money between African countries, starting with Nigeria and Benin Republic.",
     "navigation": "Navigation",
     "company": "Company",
     "socials": "Socials",
     "copyright": "© 2026 Clap. All rights reserved.",
-    "built": "Built on WhatsApp. Designed for the world.",
+    "built": "Built for Africa. Connected beyond borders.",
     "links": {
       "community": "Businesses",
       "convert": "Individuals",
@@ -74,10 +75,10 @@
       "terms": "Terms of Service"
     },
     "disclaimer": {
-      "paragraph1": "Clap is a financial technology company and is not a bank. Banking and payment services are provided through licensed financial institution partners.",
-      "paragraph2": "Clap provides technology that enables users to receive international payments, hold and exchange multiple currencies, and send money across supported payment networks.",
-      "paragraph3": "Account issuance, payment processing, settlements, foreign exchange, and related financial services are provided by regulated third-party financial institutions and payment partners.",
-      "paragraph4": "Products and services may vary by country and are subject to eligibility requirements, regulatory approvals, compliance checks, and transaction limits.",
+      "paragraph1": "Clap is a financial technology company and is not a bank. Banking, payment processing, and other regulated financial services are provided through licensed financial institution and payment partners.",
+      "paragraph2": "Clap provides technology that enables users to exchange supported currencies, initiate cross-border transfers, and make payments through supported financial networks.",
+      "paragraph3": "Currency exchange, payment processing, settlement, and payout services are facilitated by third-party financial institutions and payment partners.",
+      "paragraph4": "Products and services may vary by country and are subject to eligibility requirements, regulatory approvals, identity verification, compliance checks, and transaction limits.",
       "paragraph5": "All trademarks, logos, and brand names are the property of their respective owners."
     }
   },
@@ -85,27 +86,31 @@
   "FAQ": {
     "tag": "Got questions?",
     "title": "Frequently asked questions",
-    "description": "Everything you need to know about receiving, holding, and sending money with Clap on WhatsApp.",
+    "description": "Learn how Clap makes exchanging currencies and sending money across African borders simpler.",
     "items": {
       "q1": {
         "question": "What is Clap?",
-        "answer": "Clap is a WhatsApp-based financial platform that lets individuals and businesses receive international payments, hold multiple currencies, exchange funds, and send money across borders—all without leaving WhatsApp."
+        "answer": "Clap is a cross-border payments platform that makes it easier for individuals and businesses to exchange currencies and send money between countries. We're starting by connecting Nigeria and Benin Republic, making transactions between Naira and CFA simpler and more accessible."
       },
       "q2": {
-        "question": "Do I need to download a separate app?",
-        "answer": "No. Clap runs entirely within WhatsApp, so there's nothing extra to download to get started. A dedicated mobile app is also coming soon for users who want it."
+        "question": "Which currencies does Clap support?",
+        "answer": "Clap is starting with the Nigerian Naira (NGN) and West African CFA Franc (XOF). Users will be able to exchange between these currencies and send money across supported payment networks."
       },
       "q3": {
-        "question": "Which currencies can I hold and exchange?",
-        "answer": "Clap lets you hold multiple currencies in one place and convert between them at competitive rates, so you can receive and send funds internationally without juggling separate accounts."
+        "question": "How do cross-border transfers work?",
+        "answer": "Simply enter the amount you want to exchange, review the available exchange rate and the amount your recipient will receive, provide their payment details, and confirm your transaction. Payouts are made through supported bank and mobile money networks."
       },
       "q4": {
-        "question": "Is Clap a bank?",
-        "answer": "No. Clap is a financial technology company, not a bank. Banking, payment processing, and foreign exchange services are provided through licensed, regulated third-party financial institution partners."
+        "question": "Are there hidden charges?",
+        "answer": "Clap is built around transparent pricing. You'll be able to review the applicable exchange rate, fees, and final payout amount before confirming a transaction."
       },
       "q5": {
+        "question": "Is Clap a bank?",
+        "answer": "No. Clap is a financial technology company, not a bank. Regulated financial services, including payment processing and settlement, are facilitated through licensed third-party financial institution and payment partners."
+      },
+      "q6": {
         "question": "When can I start using Clap?",
-        "answer": "Clap is currently in early access. Join the waitlist and we'll notify you as soon as your account is ready to activate."
+        "answer": "Clap is preparing for early access. Join our waitlist and we'll notify you as soon as the platform is ready."
       }
     }
   }
