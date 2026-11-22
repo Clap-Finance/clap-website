@@ -129,7 +129,7 @@ export default async function RootLayout({
           <Footer />
           <CookieBanner />
         </NextIntlClientProvider>
-
+{/*
         <Script id="tawk-to" strategy="afterInteractive">
           {`
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -143,7 +143,7 @@ export default async function RootLayout({
               s0.parentNode.insertBefore(s1,s0);
             })();
           `}
-        </Script>
+        </Script> */}
       </body>
     </html>
   );
