@@ -167,7 +167,7 @@ type PhoneHomeScreenProps = {
 // - The 50% stop is where the fade begins; raise it to keep more of the phone solid.
 const fadeMask =
   typeof window !== "undefined" && window.innerWidth <= 768
-    ? "radial-gradient(ellipse 155% 60% at 70% 0%, #000 60%, transparent 100%)"
+    ? "radial-gradient(ellipse 155% 50% at 70% 0%, #000 60%, transparent 100%)"
     : "radial-gradient(ellipse 155% 80% at 70% 0%, #000 60%, transparent 100%)";
 
 const PhoneHomeScreen = ({
