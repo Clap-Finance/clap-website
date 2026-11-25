@@ -6,7 +6,6 @@ import { getMessages } from "next-intl/server";
 import Nav from "@/components/common/nav";
 import Footer from "@/components/common/footer";
 import CookieBanner from "@/components/common/cookie-banner";
-import Script from "next/script";
 
 const uncutSans = localFont({
   src: "../fonts/UncutSans-Variable.woff2",
@@ -20,7 +19,7 @@ const pacifico = localFont({
   display: "swap",
 });
 
-const siteUrl = "https://clapmoney.com";
+const siteUrl = "https://clapfinance.com";
 
 export const viewport: Viewport = {
   themeColor: "#2a53f1",
